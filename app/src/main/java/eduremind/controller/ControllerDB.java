@@ -80,19 +80,19 @@ public class ControllerDB extends ConnectDB {
         return catatanList;
     }
 
-//     public static void insertTugas(Integer userid, String tugas) {
-//         connection();
-//         query = "INSERT INTO tugasTB (userid, tugas) VALUES (?,?)";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, tugas);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void insertTugas(Integer userid, String tugas) {
+        connection();
+        query = "INSERT INTO tugasTB (userid, tugas) VALUES (?,?)";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, tugas);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 //     public static void insertCatatan(Integer userid, String catatan) {
 //         connection();
