@@ -85,30 +85,30 @@ public class LoginScene {
         validLB.getStyleClass().add("rgisLB");
         Button loginButton = new Button("Login");
         loginButton.getStyleClass().add("logBut");
-//         loginButton.setOnAction(env -> {
-//             String username = emailTF.getText();
-//             String password = passTF.getText();
-//             try {
-//                 int id = ControllerDB.LoginValidation(username, password);
-//                 validLB.setText("Login Berhasil");
-//                 Thread validThread = new Thread(() -> {
-//                     try {
-//                         Thread.sleep(3000);
-//                     } catch (InterruptedException e) {
-//                         e.printStackTrace();
-//                     }
+        loginButton.setOnAction(env -> {
+            String username = emailTF.getText();
+            String password = passTF.getText();
+            try {
+                int id = ControllerDB.LoginValidation(username, password);
+                validLB.setText("Login Berhasil");
+                Thread validThread = new Thread(() -> {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
         
-//                     Platform.runLater(() -> {
-//                         stage.close();
-//                         ReminderScene reminderScene = new ReminderScene(stage, id);
-//                         reminderScene.show();
-//                     });
-//                 });
-//                 validThread.start();
-//             } catch (Exception e) {
-//                 validLB.setText("Login Gagal");
-//             }
-//         });
+                    Platform.runLater(() -> {
+                        stage.close();
+                        ReminderScene reminderScene = new ReminderScene(stage, id);
+                        reminderScene.show();
+                    });
+                });
+                validThread.start();
+            } catch (Exception e) {
+                validLB.setText("Login Gagal");
+            }
+        });
         VBox loginss = new VBox(validLB, loginButton);
         loginss.setAlignment(Pos.CENTER);
         loginss.setSpacing(5);
