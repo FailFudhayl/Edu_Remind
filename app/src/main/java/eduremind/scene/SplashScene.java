@@ -21,11 +21,11 @@ public class SplashScene {
     }
 
     public void show() {
-//         // git commit -m feat : "Menambahkan image logo"
-//         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
-//         ImageView SplashImage = new ImageView(logoss);
-//         SplashImage.setFitWidth(300);
-//         SplashImage.setFitHeight(300);
+        // git commit -m "feat : Menambahkan image logo"
+        Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
+        ImageView SplashImage = new ImageView(logoss);
+        SplashImage.setFitWidth(300);
+        SplashImage.setFitHeight(300);
 
 //         // git commit -m feat : "menambahkan/membuat judul"
 //         Label titleText1 = new Label("EDU");
