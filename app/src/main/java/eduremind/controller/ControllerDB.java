@@ -1,30 +1,30 @@
-// package eduremind.controller;
+package eduremind.controller;
 
-// import java.sql.ResultSet;
-// import java.sql.SQLException;
-// import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
-// import eduremind.config.ConnectDB;
+import eduremind.config.ConnectDB;
 
-// public class ControllerDB extends ConnectDB {
-//     public static int LoginValidation(String userName, String pass) {
-//         connection();
-//         Integer id = null;
-//         query = "SELECT id FROM UserTB WHERE name=? AND pass=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setString(1, userName);
-//             preparedStatement.setString(2, pass);
-//             try (ResultSet login = preparedStatement.executeQuery()) {
-//                 while (login.next()) {
-//                     id = login.getInt("id");
-//                 }
-//             }
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//         return id;
-//     }
+public class ControllerDB extends ConnectDB {
+    public static int LoginValidation(String userName, String pass) {
+        connection();
+        Integer id = null;
+        query = "SELECT id FROM UserTB WHERE name=? AND pass=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, userName);
+            preparedStatement.setString(2, pass);
+            try (ResultSet login = preparedStatement.executeQuery()) {
+                while (login.next()) {
+                    id = login.getInt("id");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
 
 //     public static boolean insrtRegis(String username, String pass) {
 //         connection();
@@ -163,4 +163,4 @@
 //             e.printStackTrace();
 //         }
 //     }
-// }
+}
