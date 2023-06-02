@@ -48,8 +48,8 @@ public class LoginScene {
         root.setTop(logoBox);
 
 //         // Email Field dan Password Field
-//         //git commit -m feat : "buat label great "
-//         Label welcome = new Label("Hellooo👋");
+//         //git commit -m "feat : buat label great "
+        Label welcome = new Label("Hellooo👋");
 //         welcome.setTextAlignment(TextAlignment.LEFT);
 //         welcome.getStyleClass().add("welcome");
 //         Label greeting = new Label("Welcome to EDUREMIND, login to remind yourr taskk ");
