@@ -31,14 +31,14 @@ public class LoginScene {
         // init borderpone
         BorderPane root = new BorderPane();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-        // root.getStyleClass().add("scene1");
+        root.getStyleClass().add("scene1");
 
-//         // git commit -m feat : "Menambahkan image logo "
-//         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
-//         ImageView loginLogos = new ImageView(logoss);
-//         loginLogos.setPreserveRatio(true);
-//         loginLogos.setFitWidth(150);
-//         loginLogos.setFitHeight(150);
+        // git commit -m feat : "Menambahkan image logo "
+        Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
+        ImageView loginLogos = new ImageView(logoss);
+        loginLogos.setPreserveRatio(true);
+        loginLogos.setFitWidth(150);
+        loginLogos.setFitHeight(150);
 //         //git commit -m feat : "setID logo"
 //         loginLogos.setId("logo1");
 //         //git commit -m feat : "masukkan logo dalam hbox"
