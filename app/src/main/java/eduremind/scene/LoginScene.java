@@ -60,10 +60,10 @@ public class LoginScene {
         Label emailLB = new Label("Username");
         emailLB.setAlignment(Pos.CENTER_LEFT);
         emailLB.getStyleClass().add("loginLB");
-//         TextField emailTF = new TextField();
-//         emailTF.setPromptText("Username");
-//         emailTF.setAlignment(Pos.CENTER_LEFT);
-//         emailTF.getStyleClass().add("loginTF");
+        TextField emailTF = new TextField();
+        emailTF.setPromptText("Username");
+        emailTF.setAlignment(Pos.CENTER_LEFT);
+        emailTF.getStyleClass().add("loginTF");
 //         Label passLB = new Label("Password");
 //         passLB.setAlignment(Pos.CENTER_LEFT);
 //         passLB.getStyleClass().add("loginLB");
