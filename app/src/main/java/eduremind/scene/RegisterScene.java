@@ -68,11 +68,11 @@ public class RegisterScene {
         VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
         logTFBox.setSpacing(10);
 
-//         VBox loginBox = new VBox(greetBox, logTFBox);
-//         loginBox.setPadding(new Insets(130, 191, 102, 191));
-//         loginBox.setSpacing(17.5);
+        VBox loginBox = new VBox(greetBox, logTFBox);
+        loginBox.setPadding(new Insets(130, 191, 102, 191));
+        loginBox.setSpacing(17.5);
 
-//         root.setCenter(loginBox);
+        root.setCenter(loginBox);
 
 //         // Tombol Register
 //         Label validLB= new Label("  ");
