@@ -131,9 +131,9 @@ public class LoginScene {
 
         root.setBottom(loginButBox);
 
-//         // init scroll
-//         ScrollPane scroll = new ScrollPane(root);
-//         scroll.setFitToWidth(true);
+        // init scroll
+        ScrollPane scroll = new ScrollPane(root);
+        scroll.setFitToWidth(true);
 
 //         // init scene
 //         Scene loginScene = new Scene(scroll, 1440, 800);
