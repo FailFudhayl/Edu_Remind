@@ -48,20 +48,20 @@ public class SplashScene {
         stage.setScene(splashScene);
         stage.show();
         
-//         //jangan dulu di commit
-//         Thread splashThread = new Thread(() -> {
-//             try {
-//                 Thread.sleep(3000);
-//             } catch (InterruptedException e) {
-//                 e.printStackTrace();
-//             }
+        //jangan dulu di commit
+        Thread splashThread = new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-//             Platform.runLater(() -> {
-//                 stage.close();
-//                 LoginScene loginScene = new LoginScene(stage);
-//                 loginScene.show();
-//             });
-//         });
-//         splashThread.start();
+            Platform.runLater(() -> {
+                stage.close();
+                LoginScene loginScene = new LoginScene(stage);
+                loginScene.show();
+            });
+        });
+        splashThread.start();
     }
 }
