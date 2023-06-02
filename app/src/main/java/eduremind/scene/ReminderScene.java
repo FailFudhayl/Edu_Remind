@@ -1,41 +1,41 @@
-// package eduremind.scene;
+package eduremind.scene;
 
-// import java.util.ArrayList;
+import java.util.ArrayList;
 
-// import eduremind.controller.ControllerDB;
-// import javafx.geometry.Insets;
-// import javafx.geometry.Pos;
-// import javafx.scene.Scene;
-// import javafx.scene.control.Button;
-// import javafx.scene.control.Label;
-// import javafx.scene.control.ScrollPane;
-// import javafx.scene.control.TextField;
-// import javafx.scene.image.Image;
-// import javafx.scene.image.ImageView;
-// import javafx.scene.layout.BorderPane;
-// import javafx.scene.layout.HBox;
-// import javafx.scene.layout.StackPane;
-// import javafx.scene.layout.VBox;
-// import javafx.stage.Stage;
+import eduremind.controller.ControllerDB;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-// public class ReminderScene {
-//     // HANDLING STAGE
-//     private Stage stage;
-//     // handling container dan method textfield yang ingin dibuat
-//     private int textFieldcount;
-//     private VBox tugasBox;
-//     private int id;
+public class ReminderScene {
+    // HANDLING STAGE
+    private Stage stage;
+    // handling container dan method textfield yang ingin dibuat
+    private int textFieldcount;
+    private VBox tugasBox;
+    private int id;
 
-//     public ReminderScene(Stage stage, Integer id) {
-//         this.stage = stage;
-//         this.id = id;
-//     }
+    public ReminderScene(Stage stage, Integer id) {
+        this.stage = stage;
+        this.id = id;
+    }
 
-//     public int getId() {
-//         return id;
-//     }
+    public int getId() {
+        return id;
+    }
 
-//     public void show() {
+    public void show() {
 //         tugasBox = new VBox();
 //         // init borderpane
 //         BorderPane root = new BorderPane();
@@ -244,7 +244,7 @@
 //         remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
 //         stage.setScene(remindScene);
 //         stage.show();
-//     }
+    }
 
 //     private void createTF() {
 //         if (tugasBox.getChildren().get(0) instanceof Label) {
@@ -324,4 +324,4 @@
 //         }
 
 //     }
-// }
+}
