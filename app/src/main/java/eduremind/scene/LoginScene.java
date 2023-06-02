@@ -64,13 +64,13 @@ public class LoginScene {
         emailTF.setPromptText("Username");
         emailTF.setAlignment(Pos.CENTER_LEFT);
         emailTF.getStyleClass().add("loginTF");
-//         Label passLB = new Label("Password");
-//         passLB.setAlignment(Pos.CENTER_LEFT);
-//         passLB.getStyleClass().add("loginLB");
-//         PasswordField passTF = new PasswordField();
-//         passTF.setPromptText("Password");
-//         passTF.setAlignment(Pos.CENTER_LEFT);
-//         passTF.getStyleClass().add("loginTF");
+        Label passLB = new Label("Password");
+        passLB.setAlignment(Pos.CENTER_LEFT);
+        passLB.getStyleClass().add("loginLB");
+        PasswordField passTF = new PasswordField();
+        passTF.setPromptText("Password");
+        passTF.setAlignment(Pos.CENTER_LEFT);
+        passTF.getStyleClass().add("loginTF");
 //         VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
 //         logTFBox.setSpacing(10);
 
