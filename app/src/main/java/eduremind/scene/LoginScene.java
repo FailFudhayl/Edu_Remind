@@ -39,8 +39,8 @@ public class LoginScene {
         loginLogos.setPreserveRatio(true);
         loginLogos.setFitWidth(150);
         loginLogos.setFitHeight(150);
-//         //git commit -m feat : "setID logo"
-//         loginLogos.setId("logo1");
+        //git commit -m "feat : setID logo"
+        loginLogos.setId("logo1");
 //         //git commit -m feat : "masukkan logo dalam hbox"
 //         HBox logoBox = new HBox(loginLogos);
 //         //git commit -m feat : "atur agar logobox di tengah lalu letakkan di atas"
