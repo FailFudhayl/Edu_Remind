@@ -109,9 +109,9 @@ public class LoginScene {
 //                 validLB.setText("Login Gagal");
 //             }
 //         });
-//         VBox loginss = new VBox(validLB, loginButton);
-//         loginss.setAlignment(Pos.CENTER);
-//         loginss.setSpacing(5);
+        VBox loginss = new VBox(validLB, loginButton);
+        loginss.setAlignment(Pos.CENTER);
+        loginss.setSpacing(5);
 //         Label regisLB = new Label("Don't have an account yet");
 //         regisLB.getStyleClass().add("rgisLB");
 //         Button regisButton = new Button("Register");
