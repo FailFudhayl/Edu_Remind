@@ -57,9 +57,9 @@ public class LoginScene {
         greeting.getStyleClass().add("greet");
         VBox greetBox = new VBox(welcome, greeting);
 
-//         Label emailLB = new Label("Username");
-//         emailLB.setAlignment(Pos.CENTER_LEFT);
-//         emailLB.getStyleClass().add("loginLB");
+        Label emailLB = new Label("Username");
+        emailLB.setAlignment(Pos.CENTER_LEFT);
+        emailLB.getStyleClass().add("loginLB");
 //         TextField emailTF = new TextField();
 //         emailTF.setPromptText("Username");
 //         emailTF.setAlignment(Pos.CENTER_LEFT);
