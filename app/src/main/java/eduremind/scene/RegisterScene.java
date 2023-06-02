@@ -51,22 +51,22 @@ public class RegisterScene {
         greeting.getStyleClass().add("greet");
         VBox greetBox = new VBox(welcome, greeting);
 
-//         Label emailLB = new Label("Username");
-//         emailLB.setAlignment(Pos.CENTER_LEFT);
-//         emailLB.getStyleClass().add("loginLB");
-//         TextField emailTF = new TextField();
-//         emailTF.setPromptText("Email Baru");
-//         emailTF.setAlignment(Pos.CENTER_LEFT);
-//         emailTF.getStyleClass().add("loginTF");
-//         Label passLB = new Label("Password");
-//         passLB.getStyleClass().add("loginLB");
-//         passLB.setAlignment(Pos.CENTER_LEFT);
-//         PasswordField passTF = new PasswordField();
-//         passTF.setPromptText("Password Baru");
-//         passTF.getStyleClass().add("loginTF");
-//         passTF.setAlignment(Pos.CENTER_LEFT);
-//         VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
-//         logTFBox.setSpacing(10);
+        Label emailLB = new Label("Username");
+        emailLB.setAlignment(Pos.CENTER_LEFT);
+        emailLB.getStyleClass().add("loginLB");
+        TextField emailTF = new TextField();
+        emailTF.setPromptText("Email Baru");
+        emailTF.setAlignment(Pos.CENTER_LEFT);
+        emailTF.getStyleClass().add("loginTF");
+        Label passLB = new Label("Password");
+        passLB.getStyleClass().add("loginLB");
+        passLB.setAlignment(Pos.CENTER_LEFT);
+        PasswordField passTF = new PasswordField();
+        passTF.setPromptText("Password Baru");
+        passTF.getStyleClass().add("loginTF");
+        passTF.setAlignment(Pos.CENTER_LEFT);
+        VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
+        logTFBox.setSpacing(10);
 
 //         VBox loginBox = new VBox(greetBox, logTFBox);
 //         loginBox.setPadding(new Insets(130, 191, 102, 191));
