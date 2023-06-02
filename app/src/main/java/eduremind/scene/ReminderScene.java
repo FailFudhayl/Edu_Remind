@@ -236,8 +236,8 @@ public class ReminderScene {
 //             tugasBox.setPadding(new Insets(30, 10, 35, 10));
 //         }
 
-//         // borderpane margin
-//         BorderPane.setMargin(right, new Insets(5));
+        // borderpane margin
+        BorderPane.setMargin(right, new Insets(5));
 
 //         // init scene
 //         Scene remindScene = new Scene(remindBox, 1440, 800);
