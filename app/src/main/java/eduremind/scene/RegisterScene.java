@@ -107,9 +107,9 @@ public class RegisterScene {
         registt.setAlignment(Pos.CENTER);
         registt.setSpacing(5);
 
-//         //git commit -m "feat : tombol kembali ke login"
-//         Button backButton = new Button("Back");
-//         backButton.getStyleClass().add("logBut");
+        //git commit -m "feat : tombol kembali ke login"
+        Button backButton = new Button("Back");
+        backButton.getStyleClass().add("logBut");
 //         backButton.setOnAction(env ->{
 //             LoginScene loginScene = new LoginScene(stage);
 //             loginScene.show();
