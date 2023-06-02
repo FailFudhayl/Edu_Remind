@@ -27,26 +27,26 @@ public class SplashScene {
         SplashImage.setFitWidth(300);
         SplashImage.setFitHeight(300);
 
-//         // git commit -m feat : "menambahkan/membuat judul"
-//         Label titleText1 = new Label("EDU");
-//         titleText1.setId("mainJudul1");
-//         Label titleText2 = new Label("REMIND");
-//         titleText2.setId("mainJudul2");
-//         HBox titleContBox = new HBox(titleText1, titleText2);
-//         titleContBox.setSpacing(10);
-//         titleContBox.setAlignment(Pos.CENTER);
+        // // git commit -m "feat : menambahkan/membuat judul"
+        // Label titleText1 = new Label("EDU");
+        // titleText1.setId("mainJudul1");
+        // Label titleText2 = new Label("REMIND");
+        // titleText2.setId("mainJudul2");
+        // HBox titleContBox = new HBox(titleText1, titleText2);
+        // titleContBox.setSpacing(10);
+        // titleContBox.setAlignment(Pos.CENTER);
 
-//         // git commit -m feat : "membuat vbox untuk tampung logo dan title aplikasi"
-//         VBox root = new VBox(SplashImage, titleContBox);
-//         root.setSpacing(15);
-//         root.setAlignment(Pos.CENTER);
+        // // git commit -m "feat : membuat vbox untuk tampung logo dan title aplikasi"
+        // VBox root = new VBox(SplashImage, titleContBox);
+        // root.setSpacing(15);
+        // root.setAlignment(Pos.CENTER);
 
-//         // git commit -m feat : "init scene"
-//         Scene splashScene = new Scene(root, 1440, 800);
-//         splashScene.getRoot().getStyleClass().add("scene1");
-//         splashScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-//         stage.setScene(splashScene);
-//         stage.show();
+        // // git commit -m "feat : init scene"
+        // Scene splashScene = new Scene(root, 1440, 800);
+        // splashScene.getRoot().getStyleClass().add("scene1");
+        // splashScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        // stage.setScene(splashScene);
+        // stage.show();
         
 //         //jangan dulu di commit
 //         Thread splashThread = new Thread(() -> {
