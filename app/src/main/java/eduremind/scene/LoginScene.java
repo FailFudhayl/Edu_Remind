@@ -71,7 +71,7 @@ public class LoginScene {
         passTF.setPromptText("Password");
         passTF.setAlignment(Pos.CENTER_LEFT);
         passTF.getStyleClass().add("loginTF");
-//         VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
+        VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
 //         logTFBox.setSpacing(10);
 
 //         VBox loginBox = new VBox(greetBox, logTFBox);
