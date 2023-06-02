@@ -36,10 +36,10 @@ public class SplashScene {
         titleContBox.setSpacing(10);
         titleContBox.setAlignment(Pos.CENTER);
 
-        // // git commit -m "feat : membuat vbox untuk tampung logo dan title aplikasi"
-        // VBox root = new VBox(SplashImage, titleContBox);
-        // root.setSpacing(15);
-        // root.setAlignment(Pos.CENTER);
+        // git commit -m "feat : membuat vbox untuk tampung logo dan title aplikasi"
+        VBox root = new VBox(SplashImage, titleContBox);
+        root.setSpacing(15);
+        root.setAlignment(Pos.CENTER);
 
         // // git commit -m "feat : init scene"
         // Scene splashScene = new Scene(root, 1440, 800);
