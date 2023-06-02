@@ -43,19 +43,19 @@ public class ReminderScene {
         root.getStyleClass().add("scene1");
 
 //         // Buat title & logo
-//         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
-//         ImageView mainLogos = new ImageView(logoss);
-//         mainLogos.setPreserveRatio(true);
-//         mainLogos.setFitWidth(85);
-//         mainLogos.setFitHeight(90);
-//         Label title1 = new Label("Edu");
-//         title1.getStyleClass().add("eduW");
-//         Label title2 = new Label("Remind");
-//         title2.getStyleClass().add("remindW");
-//         HBox logobox = new HBox(mainLogos, title1, title2);
-//         logobox.setSpacing(10);
-//         logobox.setAlignment(Pos.CENTER);
-//         logobox.setPadding(new Insets(32, 100, 66, 100));
+        Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
+        ImageView mainLogos = new ImageView(logoss);
+        mainLogos.setPreserveRatio(true);
+        mainLogos.setFitWidth(85);
+        mainLogos.setFitHeight(90);
+        Label title1 = new Label("Edu");
+        title1.getStyleClass().add("eduW");
+        Label title2 = new Label("Remind");
+        title2.getStyleClass().add("remindW");
+        HBox logobox = new HBox(mainLogos, title1, title2);
+        logobox.setSpacing(10);
+        logobox.setAlignment(Pos.CENTER);
+        logobox.setPadding(new Insets(32, 100, 66, 100));
 
 //         root.setTop(logobox);
 //         BorderPane.setAlignment(logobox, Pos.CENTER);
