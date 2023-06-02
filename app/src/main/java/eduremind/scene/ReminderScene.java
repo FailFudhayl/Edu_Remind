@@ -60,19 +60,19 @@ public class ReminderScene {
         root.setTop(logobox);
         BorderPane.setAlignment(logobox, Pos.CENTER);
 
-//         // tampilkan jika kosong
-//         // Label kosonglb = new Label(" Tidak ada tugas terbaru");
-//         // kosonglb.getStyleClass().add("kosongg");
-//         // tugasBox = new VBox();
-//         // tugasBox.getStyleClass().add("scene1");
-//         // tugasBox.setMaxWidth(1800);
-//         // tugasBox.setAlignment(Pos.CENTER);
-//         // if(tugasBox.getChildren().isEmpty()){
-//         // tugasBox.getChildren().add(kosonglb);
-//         // tugasBox.setAlignment(Pos.TOP_LEFT);
-//         // tugasBox.setSpacing(5);
-//         // tugasBox.setPadding(new Insets(30, 10, 35, 10));
-//         // }
+        // tampilkan jika kosong
+        // Label kosonglb = new Label(" Tidak ada tugas terbaru");
+        // kosonglb.getStyleClass().add("kosongg");
+        // tugasBox = new VBox();
+        // tugasBox.getStyleClass().add("scene1");
+        // tugasBox.setMaxWidth(1800);
+        // tugasBox.setAlignment(Pos.CENTER);
+        // if(tugasBox.getChildren().isEmpty()){
+        // tugasBox.getChildren().add(kosonglb);
+        // tugasBox.setAlignment(Pos.TOP_LEFT);
+        // tugasBox.setSpacing(5);
+        // tugasBox.setPadding(new Insets(30, 10, 35, 10));
+        // }
         try {
             ArrayList<String> tasks = ControllerDB.getAllTugas(getId());
             for (String task : tasks) {
@@ -83,10 +83,10 @@ public class ReminderScene {
                 taskTF.setPromptText("Tugas " + textFieldcount);
                 taskTF.getStyleClass().add("remindTF");
                 taskTF.setPrefWidth(9000);
-                // taskTF.setOnAction(env -> {
-                //     taskTF.setEditable(false);
-                //     ControllerDB.insertTugas(getId(), taskTF.getText());
-                // });
+                taskTF.setOnAction(env -> {
+                    taskTF.setEditable(false);
+                    ControllerDB.insertTugas(getId(), taskTF.getText());
+                });
 
                 // commit feat : buat tombol silang/hapus
                 Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
