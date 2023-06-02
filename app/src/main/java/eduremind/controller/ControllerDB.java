@@ -108,47 +108,47 @@ public class ControllerDB extends ConnectDB {
         }
     }
 
-//     public static void deleteTugas(Integer userid, String tugas) {
-//         connection();
-//         query = "DELETE FROM tugasTB WHERE userid=? AND tugas=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, tugas);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void deleteTugas(Integer userid, String tugas) {
+        connection();
+        query = "DELETE FROM tugasTB WHERE userid=? AND tugas=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, tugas);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-//     public static void deleteCatatan(Integer userid, String catatan) {
-//         connection();
-//         query = "DELETE FROM catatanTB WHERE userid=? AND catatan=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, catatan);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void deleteCatatan(Integer userid, String catatan) {
+        connection();
+        query = "DELETE FROM catatanTB WHERE userid=? AND catatan=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, catatan);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-//     public static void updateTugas(Integer userid, String tugas) {
-//         connection();
-//         query = "UPDATE tugasTB SET tugas=? WHERE userid=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, tugas);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void updateTugas(Integer userid, String tugas) {
+        connection();
+        query = "UPDATE tugasTB SET tugas=? WHERE userid=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, tugas);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 //     public static void updateCatatan(Integer userid, String catatan) {
 //         connection();
