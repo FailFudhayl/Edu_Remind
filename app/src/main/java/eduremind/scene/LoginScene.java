@@ -116,10 +116,10 @@ public class LoginScene {
         regisLB.getStyleClass().add("rgisLB");
         Button regisButton = new Button("Register");
         regisButton.getStyleClass().add("regisbut");
-//         regisButton.setOnAction(env -> {
-//             RegisterScene registerScene = new RegisterScene(stage);
-//             registerScene.show();
-//         });
+        regisButton.setOnAction(env -> {
+            RegisterScene registerScene = new RegisterScene(stage);
+            registerScene.show();
+        });
         VBox registt = new VBox(regisLB, regisButton);
         registt.setAlignment(Pos.CENTER);
         registt.setSpacing(5);
