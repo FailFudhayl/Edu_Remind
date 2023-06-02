@@ -227,14 +227,14 @@ public class ReminderScene {
         remindBox.setMaxHeight(850);
         remindBox.getStyleClass().add("scene1");
 
-//         if (tugasBox.getChildren().isEmpty()) {
-//             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
-//             kosonglb.getStyleClass().add("kosongg");
-//             tugasBox.getChildren().add(kosonglb);
-//             tugasBox.setAlignment(Pos.TOP_LEFT);
-//             tugasBox.setSpacing(5);
-//             tugasBox.setPadding(new Insets(30, 10, 35, 10));
-//         }
+        if (tugasBox.getChildren().isEmpty()) {
+            Label kosonglb = new Label("                           Tidak ada tugas terbaru");
+            kosonglb.getStyleClass().add("kosongg");
+            tugasBox.getChildren().add(kosonglb);
+            tugasBox.setAlignment(Pos.TOP_LEFT);
+            tugasBox.setSpacing(5);
+            tugasBox.setPadding(new Insets(30, 10, 35, 10));
+        }
 
         // borderpane margin
         BorderPane.setMargin(right, new Insets(5));
