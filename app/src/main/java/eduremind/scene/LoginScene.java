@@ -43,9 +43,9 @@ public class LoginScene {
         loginLogos.setId("logo1");
         //git commit -m "feat : masukkan logo dalam hbox"
         HBox logoBox = new HBox(loginLogos);
-//         //git commit -m feat : "atur agar logobox di tengah lalu letakkan di atas"
-//         logoBox.setAlignment(Pos.CENTER);
-//         root.setTop(logoBox);
+        //git commit -m "feat : atur agar logobox di tengah lalu letakkan di atas"
+        logoBox.setAlignment(Pos.CENTER);
+        root.setTop(logoBox);
 
 //         // Email Field dan Password Field
 //         //git commit -m feat : "buat label great "
