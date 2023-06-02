@@ -83,10 +83,10 @@ public class ReminderScene {
                 taskTF.setPromptText("Tugas " + textFieldcount);
                 taskTF.getStyleClass().add("remindTF");
                 taskTF.setPrefWidth(9000);
-                taskTF.setOnAction(env -> {
-                    taskTF.setEditable(false);
-                    ControllerDB.insertTugas(getId(), taskTF.getText());
-                });
+                // taskTF.setOnAction(env -> {
+                //     taskTF.setEditable(false);
+                //     ControllerDB.insertTugas(getId(), taskTF.getText());
+                // });
 
                 // commit feat : buat tombol silang/hapus
                 Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
@@ -98,10 +98,10 @@ public class ReminderScene {
                 hapus.setPrefWidth(20);
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
-                hapus.setOnAction(env -> {
-                    deleteTF();
-                    ControllerDB.deleteTugas(getId(), taskTF.getText());
-                });
+                // hapus.setOnAction(env -> {
+                //     deleteTF();
+                //     ControllerDB.deleteTugas(getId(), taskTF.getText());
+                // });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);
                 exx.setPadding(new Insets(0, 2, 0, 2));
@@ -115,10 +115,10 @@ public class ReminderScene {
                 tulis.setGraphic(writer);
                 tulis.setPrefWidth(20);
                 tulis.setPrefHeight(35);
-                tulis.setOnAction(env -> {
-                    taskTF.setEditable(true);
-                    ControllerDB.updateTugas(getId(), taskTF.getText());
-                });
+                // tulis.setOnAction(env -> {
+                //     taskTF.setEditable(true);
+                //     ControllerDB.updateTugas(getId(), taskTF.getText());
+                // });
                 tulis.getStyleClass().add("tombolRM");
                 StackPane menulis = new StackPane(tulis);
                 menulis.setPrefWidth(5);
@@ -141,11 +141,11 @@ public class ReminderScene {
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
             tugasBox.setAlignment(Pos.CENTER);
         }
-//         ScrollPane scroll = new ScrollPane(tugasBox);
-//         scroll.setFitToHeight(true);
-//         scroll.setFitToHeight(true);
-//         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
-//         root.setCenter(scroll);
+        ScrollPane scroll = new ScrollPane(tugasBox);
+        scroll.setFitToHeight(true);
+        scroll.setFitToHeight(true);
+        scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
+        root.setCenter(scroll);
 
 //         // buat tombol back and plus
 //         Image arrow = new Image(getClass().getClassLoader().getResourceAsStream("img/Arrow.png"));
