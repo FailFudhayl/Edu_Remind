@@ -167,9 +167,9 @@ public class ReminderScene {
         plus.setPrefWidth(61);
         plus.setPrefHeight(58);
         plus.setAlignment(Pos.BOTTOM_RIGHT);
-//         plus.setOnAction(env -> {
-//             createTF();
-//         });
+        plus.setOnAction(env -> {
+            createTF();
+        });
 
         HBox plusbackbox = new HBox(back, plus);
         plusbackbox.setSpacing(869);
