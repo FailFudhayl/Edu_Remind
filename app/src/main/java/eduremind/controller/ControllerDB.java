@@ -150,17 +150,17 @@ public class ControllerDB extends ConnectDB {
         }
     }
 
-//     public static void updateCatatan(Integer userid, String catatan) {
-//         connection();
-//         query = "UPDATE catatanTB SET catatan=? WHERE userid=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, catatan);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void updateCatatan(Integer userid, String catatan) {
+        connection();
+        query = "UPDATE catatanTB SET catatan=? WHERE userid=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, catatan);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
