@@ -124,12 +124,12 @@ public class LoginScene {
         registt.setAlignment(Pos.CENTER);
         registt.setSpacing(5);
 
-//         VBox loginButBox = new VBox(loginss, registt);
-//         loginButBox.setPadding(new Insets(20));
-//         loginButBox.setAlignment(Pos.CENTER);
-//         loginButBox.setSpacing(10);
+        VBox loginButBox = new VBox(loginss, registt);
+        loginButBox.setPadding(new Insets(20));
+        loginButBox.setAlignment(Pos.CENTER);
+        loginButBox.setSpacing(10);
 
-//         root.setBottom(loginButBox);
+        root.setBottom(loginButBox);
 
 //         // init scroll
 //         ScrollPane scroll = new ScrollPane(root);
