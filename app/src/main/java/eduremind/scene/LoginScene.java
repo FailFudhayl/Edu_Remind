@@ -72,13 +72,13 @@ public class LoginScene {
         passTF.setAlignment(Pos.CENTER_LEFT);
         passTF.getStyleClass().add("loginTF");
         VBox logTFBox = new VBox(emailLB, emailTF, passLB, passTF);
-//         logTFBox.setSpacing(10);
+        logTFBox.setSpacing(10);
 
-//         VBox loginBox = new VBox(greetBox, logTFBox);
-//         loginBox.setPadding(new Insets(130, 191, 102, 191));
-//         loginBox.setSpacing(20);
+        VBox loginBox = new VBox(greetBox, logTFBox);
+        loginBox.setPadding(new Insets(130, 191, 102, 191));
+        loginBox.setSpacing(20);
 
-//         root.setCenter(loginBox);
+        root.setCenter(loginBox);
 
 //         // Tombol Login & Register
 //         Label validLB= new Label("  ");
