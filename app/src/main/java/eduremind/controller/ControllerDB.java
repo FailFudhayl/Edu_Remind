@@ -26,21 +26,21 @@ public class ControllerDB extends ConnectDB {
         return id;
     }
 
-//     public static boolean insrtRegis(String username, String pass) {
-//         connection();
-//         query = "INSERT INTO UserTb (name, pass) VALUES (?, ?)";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setString(1, username);
-//             preparedStatement.setString(2, pass);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//             return true;
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//         return false;
-//     }
+    public static boolean insrtRegis(String username, String pass) {
+        connection();
+        query = "INSERT INTO UserTb (name, pass) VALUES (?, ?)";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, pass);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 //     public static ArrayList<String> getAllTugas(Integer userid) {
 //         connection();
