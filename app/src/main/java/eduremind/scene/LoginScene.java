@@ -112,17 +112,17 @@ public class LoginScene {
         VBox loginss = new VBox(validLB, loginButton);
         loginss.setAlignment(Pos.CENTER);
         loginss.setSpacing(5);
-//         Label regisLB = new Label("Don't have an account yet");
-//         regisLB.getStyleClass().add("rgisLB");
-//         Button regisButton = new Button("Register");
-//         regisButton.getStyleClass().add("regisbut");
+        Label regisLB = new Label("Don't have an account yet");
+        regisLB.getStyleClass().add("rgisLB");
+        Button regisButton = new Button("Register");
+        regisButton.getStyleClass().add("regisbut");
 //         regisButton.setOnAction(env -> {
 //             RegisterScene registerScene = new RegisterScene(stage);
 //             registerScene.show();
 //         });
-//         VBox registt = new VBox(regisLB, regisButton);
-//         registt.setAlignment(Pos.CENTER);
-//         registt.setSpacing(5);
+        VBox registt = new VBox(regisLB, regisButton);
+        registt.setAlignment(Pos.CENTER);
+        registt.setSpacing(5);
 
 //         VBox loginButBox = new VBox(loginss, registt);
 //         loginButBox.setPadding(new Insets(20));
