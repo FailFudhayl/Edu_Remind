@@ -308,20 +308,20 @@ public class ReminderScene {
 //         tugasBox.getChildren().add(creaBox);
 //     }
 
-//     private void deleteTF() {
-//         if (textFieldcount >= 0) {
-//             tugasBox.getChildren().remove(textFieldcount - 1);
-//             textFieldcount--;
-//         }
+    private void deleteTF() {
+        if (textFieldcount >= 0) {
+            tugasBox.getChildren().remove(textFieldcount - 1);
+            textFieldcount--;
+        }
 
-//         if (tugasBox.getChildren().isEmpty()) {
-//             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
-//             kosonglb.getStyleClass().add("kosongg");
-//             tugasBox.getChildren().add(kosonglb);
-//             tugasBox.setAlignment(Pos.TOP_LEFT);
-//             tugasBox.setSpacing(5);
-//             tugasBox.setPadding(new Insets(30, 10, 35, 10));
-//         }
+        if (tugasBox.getChildren().isEmpty()) {
+            Label kosonglb = new Label("                           Tidak ada tugas terbaru");
+            kosonglb.getStyleClass().add("kosongg");
+            tugasBox.getChildren().add(kosonglb);
+            tugasBox.setAlignment(Pos.TOP_LEFT);
+            tugasBox.setSpacing(5);
+            tugasBox.setPadding(new Insets(30, 10, 35, 10));
+        }
 
-//     }
+    }
 }
