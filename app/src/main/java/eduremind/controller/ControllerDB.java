@@ -61,24 +61,24 @@ public class ControllerDB extends ConnectDB {
         return tugasList;
     }
 
-//     public static ArrayList<String> getAllCatatan(Integer userid) {
-//         connection();
-//         ArrayList<String> catatanList = new ArrayList<>();
-//         query = "SELECT catatan FROM catatanTB WHERE userid=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             resultSet = preparedStatement.executeQuery();
-//             while (resultSet.next()) {
-//                 catatanList.add(resultSet.getString("catatan"));
-//             }
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//             return catatanList;
+    public static ArrayList<String> getAllCatatan(Integer userid) {
+        connection();
+        ArrayList<String> catatanList = new ArrayList<>();
+        query = "SELECT catatan FROM catatanTB WHERE userid=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                catatanList.add(resultSet.getString("catatan"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return catatanList;
 
-//         }
-//         return catatanList;
-//     }
+        }
+        return catatanList;
+    }
 
 //     public static void insertTugas(Integer userid, String tugas) {
 //         connection();
