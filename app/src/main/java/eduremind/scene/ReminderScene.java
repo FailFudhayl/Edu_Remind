@@ -221,11 +221,11 @@ public class ReminderScene {
         sidebar.setFillWidth(true);
         sidebar.setPadding(new Insets(40, 10, 0, 0));
 
-//         // init container utama
-//         HBox remindBox = new HBox(sidebar, root);
-//         remindBox.setMaxWidth(1600);
-//         remindBox.setMaxHeight(850);
-//         remindBox.getStyleClass().add("scene1");
+        // init container utama
+        HBox remindBox = new HBox(sidebar, root);
+        remindBox.setMaxWidth(1600);
+        remindBox.setMaxHeight(850);
+        remindBox.getStyleClass().add("scene1");
 
 //         if (tugasBox.getChildren().isEmpty()) {
 //             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
