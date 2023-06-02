@@ -246,67 +246,67 @@ public class ReminderScene {
         stage.show();
     }
 
-//     private void createTF() {
-//         if (tugasBox.getChildren().get(0) instanceof Label) {
-//             tugasBox.getChildren().remove(0);
-//         }
+    private void createTF() {
+        if (tugasBox.getChildren().get(0) instanceof Label) {
+            tugasBox.getChildren().remove(0);
+        }
 
-//         textFieldcount++;
+        textFieldcount++;
 
-//         // buat container judul tugas
-//         // buat textfield untuk judul tugas
-//         TextField taskTF = new TextField();
-//         taskTF.setPromptText("Tugas " + textFieldcount);
-//         taskTF.getStyleClass().add("remindTF");
-//         taskTF.setPrefWidth(9000);
-//         taskTF.setOnAction(env -> {
-//             taskTF.setEditable(false);
-//             ControllerDB.insertTugas(getId(), taskTF.getText());
-//         });
+        // buat container judul tugas
+        // buat textfield untuk judul tugas
+        TextField taskTF = new TextField();
+        taskTF.setPromptText("Tugas " + textFieldcount);
+        taskTF.getStyleClass().add("remindTF");
+        taskTF.setPrefWidth(9000);
+        taskTF.setOnAction(env -> {
+            taskTF.setEditable(false);
+            ControllerDB.insertTugas(getId(), taskTF.getText());
+        });
 
-//         // commit feat : buat tombol silang/hapus
-//         Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
-//         ImageView kali = new ImageView(silang);
-//         kali.setFitWidth(65);
-//         kali.setFitHeight(65);
-//         Button hapus = new Button();
-//         hapus.setGraphic(kali);
-//         hapus.setPrefWidth(20);
-//         hapus.setPrefHeight(35);
-//         hapus.getStyleClass().add("tombolRM");
-//         hapus.setOnAction(env -> {
-//             deleteTF();
-//             ControllerDB.deleteTugas(getId(), taskTF.getText());
-//         });
-//         StackPane exx = new StackPane(hapus);
-//         exx.setPrefWidth(5);
-//         exx.setPadding(new Insets(0, 2, 0, 2));
+        // commit feat : buat tombol silang/hapus
+        Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
+        ImageView kali = new ImageView(silang);
+        kali.setFitWidth(65);
+        kali.setFitHeight(65);
+        Button hapus = new Button();
+        hapus.setGraphic(kali);
+        hapus.setPrefWidth(20);
+        hapus.setPrefHeight(35);
+        hapus.getStyleClass().add("tombolRM");
+        hapus.setOnAction(env -> {
+            deleteTF();
+            ControllerDB.deleteTugas(getId(), taskTF.getText());
+        });
+        StackPane exx = new StackPane(hapus);
+        exx.setPrefWidth(5);
+        exx.setPadding(new Insets(0, 2, 0, 2));
 
-//         // commit feat : buat tombol edit textfield
-//         Image writepic = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
-//         ImageView writer = new ImageView(writepic);
-//         writer.setFitWidth(65);
-//         writer.setFitHeight(65);
-//         Button tulis = new Button();
-//         tulis.setGraphic(writer);
-//         tulis.setPrefWidth(20);
-//         tulis.setPrefHeight(35);
-//         tulis.setOnAction(env -> {
-//             taskTF.setEditable(true);
-//             ControllerDB.updateTugas(getId(), taskTF.getText());
-//         });
-//         tulis.getStyleClass().add("tombolRM");
-//         StackPane menulis = new StackPane(tulis);
-//         menulis.setPrefWidth(5);
-//         menulis.setPadding(new Insets(0, 2, 0, 2));
+        // commit feat : buat tombol edit textfield
+        Image writepic = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
+        ImageView writer = new ImageView(writepic);
+        writer.setFitWidth(65);
+        writer.setFitHeight(65);
+        Button tulis = new Button();
+        tulis.setGraphic(writer);
+        tulis.setPrefWidth(20);
+        tulis.setPrefHeight(35);
+        tulis.setOnAction(env -> {
+            taskTF.setEditable(true);
+            ControllerDB.updateTugas(getId(), taskTF.getText());
+        });
+        tulis.getStyleClass().add("tombolRM");
+        StackPane menulis = new StackPane(tulis);
+        menulis.setPrefWidth(5);
+        menulis.setPadding(new Insets(0, 2, 0, 2));
 
-//         HBox creaBox = new HBox(taskTF, menulis, exx);
-//         creaBox.setAlignment(Pos.CENTER);
-//         creaBox.setSpacing(10);
-//         creaBox.setPadding(new Insets(30, 10, 35, 10));
+        HBox creaBox = new HBox(taskTF, menulis, exx);
+        creaBox.setAlignment(Pos.CENTER);
+        creaBox.setSpacing(10);
+        creaBox.setPadding(new Insets(30, 10, 35, 10));
 
-//         tugasBox.getChildren().add(creaBox);
-//     }
+        tugasBox.getChildren().add(creaBox);
+    }
 
     private void deleteTF() {
         if (textFieldcount >= 0) {
