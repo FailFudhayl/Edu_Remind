@@ -154,10 +154,10 @@ public class ReminderScene {
         back.setPrefWidth(55);
         back.setAlignment(Pos.BOTTOM_LEFT);
         back.getStyleClass().add("plusback");
-//         back.setOnAction(env -> {
-//             LoginScene loginScene = new LoginScene(stage);
-//             loginScene.show();
-//         });
+        back.setOnAction(env -> {
+            LoginScene loginScene = new LoginScene(stage);
+            loginScene.show();
+        });
 
         Image tambah = new Image(getClass().getClassLoader().getResourceAsStream("img/Plus.png"));
         ImageView pluslus = new ImageView(tambah);
