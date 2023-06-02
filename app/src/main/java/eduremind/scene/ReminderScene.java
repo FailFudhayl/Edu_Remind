@@ -198,8 +198,8 @@ public class ReminderScene {
 //             ReminderScene reminderScene = new ReminderScene(stage, getId());
 //             reminderScene.show();
 //         });
-//         StackPane pengingat = new StackPane(penginfgta);
-//         pengingat.setAlignment(Pos.CENTER);
+        StackPane pengingat = new StackPane(penginfgta);
+        pengingat.setAlignment(Pos.CENTER);
 
 //         Image note = new Image(getClass().getClassLoader().getResourceAsStream("img/note_putih.png"));
 //         ImageView notePutih = new ImageView(note);
