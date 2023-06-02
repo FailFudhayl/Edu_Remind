@@ -147,14 +147,14 @@ public class ReminderScene {
         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
         root.setCenter(scroll);
 
-//         // buat tombol back and plus
-//         Image arrow = new Image(getClass().getClassLoader().getResourceAsStream("img/Arrow.png"));
-//         ImageView backs = new ImageView(arrow);
-//         Button back = new Button();
-//         back.setGraphic(backs);
-//         back.setPrefWidth(55);
-//         back.setAlignment(Pos.BOTTOM_LEFT);
-//         back.getStyleClass().add("plusback");
+        // buat tombol back and plus
+        Image arrow = new Image(getClass().getClassLoader().getResourceAsStream("img/Arrow.png"));
+        ImageView backs = new ImageView(arrow);
+        Button back = new Button();
+        back.setGraphic(backs);
+        back.setPrefWidth(55);
+        back.setAlignment(Pos.BOTTOM_LEFT);
+        back.getStyleClass().add("plusback");
 //         back.setOnAction(env -> {
 //             LoginScene loginScene = new LoginScene(stage);
 //             loginScene.show();
