@@ -55,7 +55,7 @@ public class LoginScene {
         Label greeting = new Label("Welcome to EDUREMIND, login to remind yourr taskk ");
         greeting.setTextAlignment(TextAlignment.LEFT);
         greeting.getStyleClass().add("greet");
-//         VBox greetBox = new VBox(welcome, greeting);
+        VBox greetBox = new VBox(welcome, greeting);
 
 //         Label emailLB = new Label("Username");
 //         emailLB.setAlignment(Pos.CENTER_LEFT);
