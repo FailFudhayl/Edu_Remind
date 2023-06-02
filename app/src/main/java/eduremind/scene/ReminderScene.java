@@ -239,11 +239,11 @@ public class ReminderScene {
         // borderpane margin
         BorderPane.setMargin(right, new Insets(5));
 
-//         // init scene
-//         Scene remindScene = new Scene(remindBox, 1440, 800);
-//         remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-//         stage.setScene(remindScene);
-//         stage.show();
+        // init scene
+        Scene remindScene = new Scene(remindBox, 1440, 800);
+        remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(remindScene);
+        stage.show();
     }
 
 //     private void createTF() {
