@@ -215,11 +215,11 @@ public class ReminderScene {
         StackPane notess = new StackPane(catatan);
         notess.setAlignment(Pos.CENTER);
 
-//         VBox sidebar = new VBox(40, pengingat, notess);
-//         sidebar.getStyleClass().add("sidebar");
-//         sidebar.setPrefWidth(200);
-//         sidebar.setFillWidth(true);
-//         sidebar.setPadding(new Insets(40, 10, 0, 0));
+        VBox sidebar = new VBox(40, pengingat, notess);
+        sidebar.getStyleClass().add("sidebar");
+        sidebar.setPrefWidth(200);
+        sidebar.setFillWidth(true);
+        sidebar.setPadding(new Insets(40, 10, 0, 0));
 
 //         // init container utama
 //         HBox remindBox = new HBox(sidebar, root);
