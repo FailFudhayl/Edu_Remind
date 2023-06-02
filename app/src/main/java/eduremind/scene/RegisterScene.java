@@ -42,15 +42,14 @@ public class RegisterScene {
         logoBox.setAlignment(Pos.CENTER);
         root.setTop(logoBox);
 
-//         // Email Field dan Password Field
-
-//         Label welcome = new Label("Hellooo👋");
-//         welcome.setTextAlignment(TextAlignment.LEFT);
-//         welcome.getStyleClass().add("welcome");
-//         Label greeting = new Label("Welcome to EDUREMIND, input your profile below ");
-//         greeting.setTextAlignment(TextAlignment.LEFT);
-//         greeting.getStyleClass().add("greet");
-//         VBox greetBox = new VBox(welcome, greeting);
+        // Email Field dan Password Field
+        Label welcome = new Label("Hellooo👋");
+        welcome.setTextAlignment(TextAlignment.LEFT);
+        welcome.getStyleClass().add("welcome");
+        Label greeting = new Label("Welcome to EDUREMIND, input your profile below ");
+        greeting.setTextAlignment(TextAlignment.LEFT);
+        greeting.getStyleClass().add("greet");
+        VBox greetBox = new VBox(welcome, greeting);
 
 //         Label emailLB = new Label("Username");
 //         emailLB.setAlignment(Pos.CENTER_LEFT);
