@@ -1,0 +1,218 @@
+.welcome {
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 36px;
+    -fx-text-fill: #232855;
+}
+
+.greet {
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 400;
+    -fx-font-size: 22px;
+    -fx-text-fill: #232855;
+}
+
+.loginLB{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-text-fill:  #215B63;
+}
+
+.loginTF{
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-text-fill: #215B63;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 380;
+    -fx-font-size: 28px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px 10px;
+    -fx-pref-width: 200;
+}
+
+.scene1{
+    -fx-background-color:  #FFFFFF;
+}
+
+.logBut{
+    -fx-background-color: #215B63;
+    -fx-text-fill: #ffff;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+.logBut:hover{
+    -fx-background-color: #ffff;
+    -fx-text-fill: #215B63;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 4px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+
+.regisbut{
+    -fx-background-color: #ffff;
+    -fx-text-fill: #215B63;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 4px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+.regisbut:hover{
+    -fx-background-color: #215B63;
+    -fx-text-fill: #ffff;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+
+.rgisLB{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 400;
+    -fx-font-size: 22px;
+    -fx-text-fill: #215B63;
+}
+
+.eduW{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 56px;
+    -fx-text-fill: #232855;
+}
+
+.remindW{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 56px;
+    -fx-text-fill: #215B63;
+}
+
+.remindTF{
+    -fx-background-color:  #232855;
+    -fx-text-fill: #ffff;
+    -fx-border-color: #232855;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 600;
+    -fx-font-size: 28px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 30px 8px 30px 8px;
+    -fx-pref-width: 700;
+}
+
+.tombolRM{
+    -fx-padding: 5px 5px;
+    -fx-pref-width: 1;
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color:  #FFFFFF;
+}
+.tombolRM:hover{
+    -fx-padding: 5px 5px;
+    -fx-pref-width: 1;
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color:  #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
+}
+
+.sidebar{
+    -fx-background-color: #232855;
+
+}
+
+.sidebarBut{
+    -fx-background-color: #232855;
+    -fx-border-color: #232855;
+}
+.sidebarBut:hover{
+    -fx-background-color: #232855;
+    -fx-border-color: #232855;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
+}
+
+.noteTF{
+    -fx-background-color:  rgba(35, 40, 85, 0.15);;
+    -fx-text-fill: #215B63;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 600;
+    -fx-font-size: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 8px;
+    -fx-pref-width: 1000;
+}
+
+.kosongg{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 680;
+    -fx-font-size: 40px;
+    -fx-text-fill: #232855;
+}
+
+.plusback{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+}
+.plusback:hover{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
+}
+
+#mainJudul1{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 100px;
+    -fx-text-fill: #232855;
+}
+
+#mainJudul2{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 100px;
+    -fx-text-fill: #215B63;
+}
