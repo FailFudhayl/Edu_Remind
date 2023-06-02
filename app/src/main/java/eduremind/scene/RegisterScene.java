@@ -110,10 +110,10 @@ public class RegisterScene {
         //git commit -m "feat : tombol kembali ke login"
         Button backButton = new Button("Back");
         backButton.getStyleClass().add("logBut");
-//         backButton.setOnAction(env ->{
-//             LoginScene loginScene = new LoginScene(stage);
-//             loginScene.show();
-//         });
+        backButton.setOnAction(env ->{
+            LoginScene loginScene = new LoginScene(stage);
+            loginScene.show();
+        });
 
         VBox registbutBox = new VBox(validLB, registt, backButton);
         registbutBox.setPadding(new Insets(20));
