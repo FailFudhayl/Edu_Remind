@@ -75,9 +75,9 @@ public class RegisterScene {
         root.setCenter(loginBox);
 
 //         // Tombol Register
-//         Label validLB= new Label("  ");
-//         validLB.getStyleClass().add("rgisLB");
-//         Button regisButton = new Button("Register");
+        Label validLB= new Label("  ");
+        validLB.getStyleClass().add("rgisLB");
+        Button regisButton = new Button("Register");
 //         regisButton.setOnAction(env -> {
 //             String username = emailTF.getText();
 //             String password = passTF.getText();
@@ -103,9 +103,9 @@ public class RegisterScene {
 //             }
 //         });
 //         regisButton.getStyleClass().add("regisbut");
-//         VBox registt = new VBox(regisButton);
-//         registt.setAlignment(Pos.CENTER);
-//         registt.setSpacing(5);
+        VBox registt = new VBox(regisButton);
+        registt.setAlignment(Pos.CENTER);
+        registt.setSpacing(5);
 
 //         //git commit -m "feat : tombol kembali ke login"
 //         Button backButton = new Button("Back");
