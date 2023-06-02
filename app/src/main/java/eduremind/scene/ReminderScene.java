@@ -115,10 +115,9 @@ public class ReminderScene {
                 tulis.setGraphic(writer);
                 tulis.setPrefWidth(20);
                 tulis.setPrefHeight(35);
-                // tulis.setOnAction(env -> {
-                //     taskTF.setEditable(true);
-                //     ControllerDB.updateTugas(getId(), taskTF.getText());
-                // });
+                tulis.setOnAction(env -> {
+                    taskTF.setEditable(true);
+                });
                 tulis.getStyleClass().add("tombolRM");
                 StackPane menulis = new StackPane(tulis);
                 menulis.setPrefWidth(5);
