@@ -193,10 +193,10 @@ public class ReminderScene {
         Button penginfgta = new Button();
         penginfgta.setGraphic(lonPutih);
         penginfgta.getStyleClass().add("sidebarBut");
-//         penginfgta.setOnAction(env -> {
-//             ReminderScene reminderScene = new ReminderScene(stage, getId());
-//             reminderScene.show();
-//         });
+        penginfgta.setOnAction(env -> {
+            ReminderScene reminderScene = new ReminderScene(stage, getId());
+            reminderScene.show();
+        });
         StackPane pengingat = new StackPane(penginfgta);
         pengingat.setAlignment(Pos.CENTER);
 
