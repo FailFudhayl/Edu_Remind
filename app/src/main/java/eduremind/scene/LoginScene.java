@@ -51,10 +51,10 @@ public class LoginScene {
 //         //git commit -m "feat : buat label great "
         Label welcome = new Label("Hellooo👋");
         welcome.setTextAlignment(TextAlignment.LEFT);
-//         welcome.getStyleClass().add("welcome");
-//         Label greeting = new Label("Welcome to EDUREMIND, login to remind yourr taskk ");
-//         greeting.setTextAlignment(TextAlignment.LEFT);
-//         greeting.getStyleClass().add("greet");
+        welcome.getStyleClass().add("welcome");
+        Label greeting = new Label("Welcome to EDUREMIND, login to remind yourr taskk ");
+        greeting.setTextAlignment(TextAlignment.LEFT);
+        greeting.getStyleClass().add("greet");
 //         VBox greetBox = new VBox(welcome, greeting);
 
 //         Label emailLB = new Label("Username");
