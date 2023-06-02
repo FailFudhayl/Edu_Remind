@@ -186,14 +186,14 @@ public class ReminderScene {
         right.getStyleClass().add("scene1");
         root.setRight(right);
 
-//         // membuat sidebar
-//         Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
-//         ImageView lonPutih = new ImageView(lonceng);
-//         lonPutih.setFitWidth(90);
-//         lonPutih.setFitHeight(90);
-//         Button penginfgta = new Button();
-//         penginfgta.setGraphic(lonPutih);
-//         penginfgta.getStyleClass().add("sidebarBut");
+        // membuat sidebar
+        Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
+        ImageView lonPutih = new ImageView(lonceng);
+        lonPutih.setFitWidth(90);
+        lonPutih.setFitHeight(90);
+        Button penginfgta = new Button();
+        penginfgta.setGraphic(lonPutih);
+        penginfgta.getStyleClass().add("sidebarBut");
 //         penginfgta.setOnAction(env -> {
 //             ReminderScene reminderScene = new ReminderScene(stage, getId());
 //             reminderScene.show();
