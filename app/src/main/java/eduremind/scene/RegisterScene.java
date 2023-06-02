@@ -31,16 +31,16 @@ public class RegisterScene {
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         root.getStyleClass().add("scene1");
 
-//         // Menambahkan image
-//         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
-//         ImageView loginLogos = new ImageView(logoss);
-//         loginLogos.setPreserveRatio(true);
-//         loginLogos.setFitWidth(150);
-//         loginLogos.setFitHeight(150);
-//         loginLogos.setId("logo1");
-//         HBox logoBox = new HBox(loginLogos);
-//         logoBox.setAlignment(Pos.CENTER);
-//         root.setTop(logoBox);
+        // Menambahkan image
+        Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
+        ImageView loginLogos = new ImageView(logoss);
+        loginLogos.setPreserveRatio(true);
+        loginLogos.setFitWidth(150);
+        loginLogos.setFitHeight(150);
+        loginLogos.setId("logo1");
+        HBox logoBox = new HBox(loginLogos);
+        logoBox.setAlignment(Pos.CENTER);
+        root.setTop(logoBox);
 
 //         // Email Field dan Password Field
 
