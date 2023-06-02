@@ -207,10 +207,10 @@ public class ReminderScene {
         Button catatan = new Button();
         catatan.setGraphic(notePutih);
         catatan.getStyleClass().add("sidebarBut");
-//         catatan.setOnAction(env -> {
-//             NoteScene noteScene = new NoteScene(stage, getId());
-//             noteScene.show();
-//         });
+        catatan.setOnAction(env -> {
+            NoteScene noteScene = new NoteScene(stage, getId());
+            noteScene.show();
+        });
         StackPane notess = new StackPane(catatan);
         notess.setAlignment(Pos.CENTER);
 
