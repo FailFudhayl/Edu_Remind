@@ -115,12 +115,12 @@ public class RegisterScene {
 //             loginScene.show();
 //         });
 
-//         VBox registbutBox = new VBox(validLB, registt, backButton);
-//         registbutBox.setPadding(new Insets(20));
-//         registbutBox.setAlignment(Pos.CENTER);
-//         registbutBox.setSpacing(10);
+        VBox registbutBox = new VBox(validLB, registt, backButton);
+        registbutBox.setPadding(new Insets(20));
+        registbutBox.setAlignment(Pos.CENTER);
+        registbutBox.setSpacing(10);
 
-//         root.setBottom(registbutBox);
+        root.setBottom(registbutBox);
 
 //         // init scroll
 //         ScrollPane scroll = new ScrollPane(root);
