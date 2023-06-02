@@ -94,19 +94,19 @@ public class ControllerDB extends ConnectDB {
         }
     }
 
-//     public static void insertCatatan(Integer userid, String catatan) {
-//         connection();
-//         query = "INSERT INTO catatanTB (userid, catatan) VALUES (?,?)";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             preparedStatement.setString(2, catatan);
-//             preparedStatement.executeUpdate();
-//             preparedStatement.close();
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//         }
-//     }
+    public static void insertCatatan(Integer userid, String catatan) {
+        connection();
+        query = "INSERT INTO catatanTB (userid, catatan) VALUES (?,?)";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, catatan);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 //     public static void deleteTugas(Integer userid, String tugas) {
 //         connection();
