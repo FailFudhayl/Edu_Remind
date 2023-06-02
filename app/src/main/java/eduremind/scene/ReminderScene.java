@@ -98,10 +98,10 @@ public class ReminderScene {
                 hapus.setPrefWidth(20);
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
-                // hapus.setOnAction(env -> {
-                //     deleteTF();
-                //     ControllerDB.deleteTugas(getId(), taskTF.getText());
-                // });
+                hapus.setOnAction(env -> {
+                    deleteTF();
+                    ControllerDB.deleteTugas(getId(), taskTF.getText());
+                });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);
                 exx.setPadding(new Insets(0, 2, 0, 2));
