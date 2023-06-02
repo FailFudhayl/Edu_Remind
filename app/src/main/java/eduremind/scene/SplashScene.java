@@ -1,26 +1,26 @@
-// package eduremind.scene;
+package eduremind.scene;
 
-// import javafx.application.Platform;
-// import javafx.geometry.Pos;
-// import javafx.scene.Scene;
-// import javafx.scene.control.Label;
-// import javafx.scene.image.Image;
-// import javafx.scene.image.ImageView;
-// import javafx.scene.layout.BorderPane;
-// import javafx.scene.layout.HBox;
-// import javafx.scene.layout.VBox;
-// import javafx.scene.text.Font;
-// import javafx.scene.text.Text;
-// import javafx.stage.Stage;
+import javafx.application.Platform;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
-// public class SplashScene {
-//     private Stage stage;
+public class SplashScene {
+    private Stage stage;
 
-//     public SplashScene(Stage stage) {
-//         this.stage = stage;
-//     }
+    public SplashScene(Stage stage) {
+        this.stage = stage;
+    }
 
-//     public void show() {
+    public void show() {
 //         // git commit -m feat : "Menambahkan image logo"
 //         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
 //         ImageView SplashImage = new ImageView(logoss);
@@ -63,5 +63,5 @@
 //             });
 //         });
 //         splashThread.start();
-//     }
-// }
+    }
+}

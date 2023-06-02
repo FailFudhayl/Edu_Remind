@@ -47,8 +47,8 @@ public class LoginScene {
         logoBox.setAlignment(Pos.CENTER);
         root.setTop(logoBox);
 
-//         // Email Field dan Password Field
-//         //git commit -m "feat : buat label great "
+        // Email Field dan Password Field
+        //git commit -m "feat : buat label great "
         Label welcome = new Label("Hellooo👋");
         welcome.setTextAlignment(TextAlignment.LEFT);
         welcome.getStyleClass().add("welcome");
