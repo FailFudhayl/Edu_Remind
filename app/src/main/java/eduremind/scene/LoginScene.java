@@ -80,11 +80,11 @@ public class LoginScene {
 
         root.setCenter(loginBox);
 
-//         // Tombol Login & Register
-//         Label validLB= new Label("  ");
-//         validLB.getStyleClass().add("rgisLB");
-//         Button loginButton = new Button("Login");
-//         loginButton.getStyleClass().add("logBut");
+        // Tombol Login & Register
+        Label validLB= new Label("  ");
+        validLB.getStyleClass().add("rgisLB");
+        Button loginButton = new Button("Login");
+        loginButton.getStyleClass().add("logBut");
 //         loginButton.setOnAction(env -> {
 //             String username = emailTF.getText();
 //             String password = passTF.getText();
