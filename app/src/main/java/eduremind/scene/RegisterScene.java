@@ -1,35 +1,35 @@
-// package eduremind.scene;
+package eduremind.scene;
 
-// import eduremind.controller.ControllerDB;
-// import javafx.application.Platform;
-// import javafx.geometry.Insets;
-// import javafx.geometry.Pos;
-// import javafx.scene.Scene;
-// import javafx.scene.control.Button;
-// import javafx.scene.control.Label;
-// import javafx.scene.control.PasswordField;
-// import javafx.scene.control.ScrollPane;
-// import javafx.scene.control.TextField;
-// import javafx.scene.image.Image;
-// import javafx.scene.image.ImageView;
-// import javafx.scene.layout.BorderPane;
-// import javafx.scene.layout.HBox;
-// import javafx.scene.layout.VBox;
-// import javafx.scene.text.TextAlignment;
-// import javafx.stage.Stage;
+import eduremind.controller.ControllerDB;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Stage;
 
-// public class RegisterScene {
-//     private Stage stage;
+public class RegisterScene {
+    private Stage stage;
 
-//     public RegisterScene(Stage stage) {
-//         this.stage = stage;
-//     }
+    public RegisterScene(Stage stage) {
+        this.stage = stage;
+    }
 
-//     public void show() {
-//         // init borderpone
-//         BorderPane root = new BorderPane();
-//         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-//         root.getStyleClass().add("scene1");
+    public void show() {
+        // init borderpone
+        BorderPane root = new BorderPane();
+        root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        root.getStyleClass().add("scene1");
 
 //         // Menambahkan image
 //         Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
@@ -38,7 +38,6 @@
 //         loginLogos.setFitWidth(150);
 //         loginLogos.setFitHeight(150);
 //         loginLogos.setId("logo1");
-//         ;
 //         HBox logoBox = new HBox(loginLogos);
 //         logoBox.setAlignment(Pos.CENTER);
 //         root.setTop(logoBox);
@@ -133,5 +132,5 @@
 //         loginScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
 //         stage.setScene(loginScene);
 //         stage.show();
-//     }
-// }
+    }
+}
