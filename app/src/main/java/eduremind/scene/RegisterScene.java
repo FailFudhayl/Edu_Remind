@@ -122,9 +122,9 @@ public class RegisterScene {
 
         root.setBottom(registbutBox);
 
-//         // init scroll
-//         ScrollPane scroll = new ScrollPane(root);
-//         scroll.setFitToWidth(true);
+        // init scroll
+        ScrollPane scroll = new ScrollPane(root);
+        scroll.setFitToWidth(true);
 
 //         // init scene
 //         Scene loginScene = new Scene(scroll, 1440, 800);
