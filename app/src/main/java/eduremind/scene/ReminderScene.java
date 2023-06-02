@@ -179,12 +179,12 @@ public class ReminderScene {
 
         root.setBottom(plusbackbox);
 
-//         Image putih = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
-//         ImageView white = new ImageView(putih);
-//         VBox right = new VBox(white);
-//         right.setMaxWidth(1);
-//         right.getStyleClass().add("scene1");
-//         root.setRight(right);
+        Image putih = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
+        ImageView white = new ImageView(putih);
+        VBox right = new VBox(white);
+        right.setMaxWidth(1);
+        right.getStyleClass().add("scene1");
+        root.setRight(right);
 
 //         // membuat sidebar
 //         Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
