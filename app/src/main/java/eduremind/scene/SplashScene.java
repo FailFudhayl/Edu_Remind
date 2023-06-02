@@ -27,14 +27,14 @@ public class SplashScene {
         SplashImage.setFitWidth(300);
         SplashImage.setFitHeight(300);
 
-        // // git commit -m "feat : menambahkan/membuat judul"
-        // Label titleText1 = new Label("EDU");
-        // titleText1.setId("mainJudul1");
-        // Label titleText2 = new Label("REMIND");
-        // titleText2.setId("mainJudul2");
-        // HBox titleContBox = new HBox(titleText1, titleText2);
-        // titleContBox.setSpacing(10);
-        // titleContBox.setAlignment(Pos.CENTER);
+        // git commit -m "feat : menambahkan/membuat judul"
+        Label titleText1 = new Label("EDU");
+        titleText1.setId("mainJudul1");
+        Label titleText2 = new Label("REMIND");
+        titleText2.setId("mainJudul2");
+        HBox titleContBox = new HBox(titleText1, titleText2);
+        titleContBox.setSpacing(10);
+        titleContBox.setAlignment(Pos.CENTER);
 
         // // git commit -m "feat : membuat vbox untuk tampung logo dan title aplikasi"
         // VBox root = new VBox(SplashImage, titleContBox);
