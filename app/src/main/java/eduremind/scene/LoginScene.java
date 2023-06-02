@@ -135,10 +135,10 @@ public class LoginScene {
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
 
-//         // init scene
-//         Scene loginScene = new Scene(scroll, 1440, 800);
-//         loginScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-//         stage.setScene(loginScene);
-//         stage.show();
+        // init scene
+        Scene loginScene = new Scene(scroll, 1440, 800);
+        loginScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(loginScene);
+        stage.show();
     }
 }
