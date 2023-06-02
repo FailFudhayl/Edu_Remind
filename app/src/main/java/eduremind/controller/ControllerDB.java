@@ -42,24 +42,24 @@ public class ControllerDB extends ConnectDB {
         return false;
     }
 
-//     public static ArrayList<String> getAllTugas(Integer userid) {
-//         connection();
-//         ArrayList<String> tugasList = new ArrayList<>();
-//         query = "SELECT tugas FROM tugasTB WHERE userid=?";
-//         try {
-//             preparedStatement = connection.prepareStatement(query);
-//             preparedStatement.setInt(1, userid);
-//             resultSet = preparedStatement.executeQuery();
-//             while (resultSet.next()) {
-//                 tugasList.add(resultSet.getString("tugas"));
-//             }
-//         } catch (SQLException e) {
-//             e.printStackTrace();
-//             return tugasList;
+    public static ArrayList<String> getAllTugas(Integer userid) {
+        connection();
+        ArrayList<String> tugasList = new ArrayList<>();
+        query = "SELECT tugas FROM tugasTB WHERE userid=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                tugasList.add(resultSet.getString("tugas"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return tugasList;
 
-//         }
-//         return tugasList;
-//     }
+        }
+        return tugasList;
+    }
 
 //     public static ArrayList<String> getAllCatatan(Integer userid) {
 //         connection();
