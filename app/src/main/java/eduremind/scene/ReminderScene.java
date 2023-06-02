@@ -201,19 +201,19 @@ public class ReminderScene {
         StackPane pengingat = new StackPane(penginfgta);
         pengingat.setAlignment(Pos.CENTER);
 
-//         Image note = new Image(getClass().getClassLoader().getResourceAsStream("img/note_putih.png"));
-//         ImageView notePutih = new ImageView(note);
-//         notePutih.setFitWidth(97);
-//         notePutih.setFitHeight(97);
-//         Button catatan = new Button();
-//         catatan.setGraphic(notePutih);
-//         catatan.getStyleClass().add("sidebarBut");
+        Image note = new Image(getClass().getClassLoader().getResourceAsStream("img/note_putih.png"));
+        ImageView notePutih = new ImageView(note);
+        notePutih.setFitWidth(97);
+        notePutih.setFitHeight(97);
+        Button catatan = new Button();
+        catatan.setGraphic(notePutih);
+        catatan.getStyleClass().add("sidebarBut");
 //         catatan.setOnAction(env -> {
 //             NoteScene noteScene = new NoteScene(stage, getId());
 //             noteScene.show();
 //         });
-//         StackPane notess = new StackPane(catatan);
-//         notess.setAlignment(Pos.CENTER);
+        StackPane notess = new StackPane(catatan);
+        notess.setAlignment(Pos.CENTER);
 
 //         VBox sidebar = new VBox(40, pengingat, notess);
 //         sidebar.getStyleClass().add("sidebar");
