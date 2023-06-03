@@ -215,10 +215,10 @@ public class NoteScene {
         notePutih.setFitHeight(97);
         Button catatan = new Button(null, notePutih);
         catatan.getStyleClass().add("sidebarBut");
-        // catatan.setOnAction(env -> {
-        //     NoteScene noteScene = new NoteScene(stage, getId());
-        //     noteScene.show();
-        // });
+        catatan.setOnAction(env -> {
+            NoteScene noteScene = new NoteScene(stage, getId());
+            noteScene.show();
+        });
         StackPane notess = new StackPane(catatan);
         notess.setAlignment(Pos.CENTER);
 
