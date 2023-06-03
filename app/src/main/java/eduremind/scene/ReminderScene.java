@@ -38,6 +38,7 @@ public class ReminderScene extends CreateDeleteTask{
 
     public void show() {
         tugasBox = new VBox();
+        tugasBox.getStyleClass().add("scene1");
         // init borderpane
         BorderPane root = new BorderPane();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
@@ -133,6 +134,7 @@ public class ReminderScene extends CreateDeleteTask{
             tugasBox.setAlignment(Pos.CENTER);
         }
         ScrollPane scroll = new ScrollPane(tugasBox);
+        scroll.getStyleClass().add("scene1");
         scroll.setFitToHeight(true);
         scroll.setFitToHeight(true);
         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
