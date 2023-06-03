@@ -94,7 +94,7 @@ public class NoteScene extends CreateDeleteTask{
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
-                    deleteTA();
+                    createTask();
                     ControllerDB.deleteCatatan(getId(), taskTF.getText());
                 });
                 StackPane exx = new StackPane(hapus);
