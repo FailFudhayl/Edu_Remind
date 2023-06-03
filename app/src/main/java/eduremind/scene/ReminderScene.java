@@ -169,7 +169,7 @@ public class ReminderScene extends CreateDeleteTask{
         plus.setPrefHeight(58);
         plus.setAlignment(Pos.BOTTOM_RIGHT);
         plus.setOnAction(env -> {
-            createTF();
+            createTask();
         });
 
         HBox plusbackbox = new HBox(back, plus);
@@ -294,7 +294,6 @@ public class ReminderScene extends CreateDeleteTask{
         tulis.setPrefHeight(35);
         tulis.setOnAction(env -> {
             taskTF.setEditable(true);
-            ControllerDB.updateTugas(getId(), taskTF.getText());
         });
         tulis.getStyleClass().add("tombolRM");
         StackPane menulis = new StackPane(tulis);
