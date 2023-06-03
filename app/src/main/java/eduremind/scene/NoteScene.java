@@ -182,12 +182,12 @@ public class NoteScene {
         //     createTA();
         // });
 
-        // HBox plusbackbox = new HBox(back, plus);
-        // plusbackbox.setSpacing(869);
-        // plusbackbox.setAlignment(Pos.CENTER);
-        // plusbackbox.setPadding(new Insets(10, 30, 54, 95));
+        HBox plusbackbox = new HBox(back, plus);
+        plusbackbox.setSpacing(869);
+        plusbackbox.setAlignment(Pos.CENTER);
+        plusbackbox.setPadding(new Insets(10, 30, 54, 95));
 
-        // root.setBottom(plusbackbox);
+        root.setBottom(plusbackbox);
 
         // Image putih = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
         // ImageView white = new ImageView(putih);
