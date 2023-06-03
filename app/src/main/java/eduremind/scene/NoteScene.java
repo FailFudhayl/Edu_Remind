@@ -229,10 +229,10 @@ public class NoteScene {
         sidebar.setFillWidth(true);
         sidebar.setPadding(new Insets(40, 10, 0, 0));
 
-        // HBox noteBox = new HBox(sidebar, root);
-        // noteBox.setMaxWidth(1800);
-        // noteBox.setMaxHeight(850);
-        // noteBox.getStyleClass().add("scene1");
+        HBox noteBox = new HBox(sidebar, root);
+        noteBox.setMaxWidth(1800);
+        noteBox.setMaxHeight(850);
+        noteBox.getStyleClass().add("scene1");
 
         //kondisi jika kosong
         if (tugasBox.getChildren().isEmpty()) {
