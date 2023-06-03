@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import eduremind.Create_Delete_Task.CreateDeleteTask;
 import eduremind.controller.ControllerDB;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -22,13 +24,14 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class NoteScene extends CreateDeleteTask{
+public class NoteScene extends CreateDeleteTask {
     // HANDLING STAGE
     private Stage stage;
     private int id;
     // handling container dan method textfield yang ingin dibuat
-    private int textAracount;
+    // private int textAracount;
     private VBox tugasBox;
+    ObservableList<String> notes = FXCollections.observableArrayList();
 
     public NoteScene(Stage stage, int id) {
         this.stage = stage;
@@ -66,86 +69,8 @@ public class NoteScene extends CreateDeleteTask{
         root.setTop(logobox);
         BorderPane.setAlignment(logobox, Pos.CENTER);
 
-        try {
-            ArrayList<String> notes = ControllerDB.getAllCatatan(getId());
-            for (String note : notes) {
-                // buat container judul tugas
-                TextArea taskTF = new TextArea();
-                taskTF.setEditable(false);
-                taskTF.setPromptText("Catatan " + textAracount);
-                taskTF.setText(note);
-                taskTF.getStyleClass().add("noteTF");
-                taskTF.setPrefWidth(9000);
-                taskTF.setWrapText(true);
-                KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
-                taskTF.setOnKeyPressed(evn -> {
-                    if (saveCombination.match(evn)) {
-                        if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
-                            System.out.println("apa");
-                            ControllerDB.updateCatatan(getId(), taskTF.getText());
-                        } else {
-                            ControllerDB.insertCatatan(getId(), taskTF.getText());
-                        }
-                        evn.consume();
-                        taskTF.setEditable(false);
-                    }
-                });
+        updateVBox();
 
-                // commit feat : buat tombol silang/hapus
-                Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
-                ImageView kali = new ImageView(silang);
-                kali.setFitWidth(65);
-                kali.setFitHeight(65);
-                Button hapus = new Button(null, kali);
-                hapus.setPrefWidth(20);
-                hapus.setPrefHeight(35);
-                hapus.getStyleClass().add("tombolRM");
-                hapus.setOnAction(env -> {
-                    ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                    deleteTask();
-                });
-                StackPane exx = new StackPane(hapus);
-                exx.setPrefWidth(5);
-                exx.setPadding(new Insets(0, 2, 0, 2));
-
-                 // commit feat : buat tombol edit textfield
-                Image tulis = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
-                ImageView nulis = new ImageView(tulis);
-                nulis.setFitWidth(65);
-                nulis.setFitHeight(65);
-                Button write = new Button();
-                write.setGraphic(nulis);
-                write.setPrefWidth(20);
-                write.setPrefHeight(35);
-                write.getStyleClass().add("tombolRM");
-                write.setOnAction(env -> {
-                    ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                    taskTF.setEditable(true);
-                });
-                StackPane menulis = new StackPane(write);
-                menulis.setPrefWidth(5);
-                menulis.setPadding(new Insets(0, 2, 0, 2));
-
-                VBox tombolCttn = new VBox(menulis, exx);
-                tombolCttn.setSpacing(25);
-
-                HBox creabox = new HBox(taskTF, tombolCttn);
-                creabox.setAlignment(Pos.CENTER);
-                creabox.setSpacing(10);
-                creabox.setPadding(new Insets(30, 10, 35, 10));
-
-                tugasBox.getChildren().add(creabox);
-                tugasBox.setAlignment(Pos.CENTER);
-            }
-        } catch (Exception e) {
-            Label kosonglb = new Label("                           Tidak ada catatan terbaru");
-            kosonglb.getStyleClass().add("kosongg");
-            tugasBox.getChildren().add(kosonglb);
-            tugasBox.setAlignment(Pos.TOP_LEFT);
-            tugasBox.setSpacing(5);
-            tugasBox.setPadding(new Insets(30, 10, 35, 10));
-            tugasBox.setAlignment(Pos.CENTER);
-        }
         ScrollPane scroll = new ScrollPane(tugasBox);
         scroll.getStyleClass().add("scene1");
         scroll.setFitToHeight(true);
@@ -231,9 +156,9 @@ public class NoteScene extends CreateDeleteTask{
         noteBox.setMaxHeight(850);
         noteBox.getStyleClass().add("scene1");
 
-        //kondisi jika kosong
+        // kondisi jika kosong
         if (tugasBox.getChildren().isEmpty()) {
-            Label kosonglb = new Label("                           Tidak ada tugas terbaru");
+            Label kosonglb = new Label("                           Tidak ada catatan terbaru");
             kosonglb.getStyleClass().add("kosongg");
             tugasBox.getChildren().add(kosonglb);
             tugasBox.setAlignment(Pos.TOP_LEFT);
@@ -255,93 +180,183 @@ public class NoteScene extends CreateDeleteTask{
     public void createTask() {
         if (tugasBox.getChildren().get(0) instanceof Label) {
             tugasBox.getChildren().remove(0);
-            }
-            textAracount++;
-    
-            // buat container judul tugas
-            TextArea taskTF = new TextArea();
-            taskTF.setEditable(false);
-            taskTF.setPromptText("Catatan " + textAracount);
-            taskTF.getStyleClass().add("noteTF");
-            taskTF.setPrefWidth(9000);
-            taskTF.setWrapText(true);
-            taskTF.setOnTouchStationary(env -> {
-                taskTF.setEditable(false);
-                ControllerDB.insertCatatan(getId(), taskTF.getText());
-            });
-            KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
-            taskTF.setOnKeyPressed(evn -> {
-                if (saveCombination.match(evn)) {
-                    if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
-                        ControllerDB.updateCatatan(getId(), taskTF.getText());
-                    } else {
-                        ControllerDB.insertCatatan(getId(), taskTF.getText());
-                    }
-                    evn.consume();
-                    taskTF.setEditable(false);
+        }
+        // textAracount++;
+
+        // buat container judul tugas
+        TextArea taskTF = new TextArea();
+        taskTF.setEditable(false);
+        taskTF.setPromptText("Catatan " + notes.size());
+        taskTF.getStyleClass().add("noteTF");
+        taskTF.setPrefWidth(9000);
+        taskTF.setWrapText(true);
+        KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
+        taskTF.setOnKeyPressed(evn -> {
+            if (saveCombination.match(evn)) {
+                if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
+                    ControllerDB.updateCatatan(getId(), taskTF.getText());
+                } else {
+                    ControllerDB.insertCatatan(getId(), taskTF.getText());
                 }
-            });
-    
-            // commit feat : buat tombol silang/hapus
-            Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
-            ImageView kali = new ImageView(silang);
-            kali.setFitWidth(65);
-            kali.setFitHeight(65);
-            Button hapus = new Button(null, kali);
-            hapus.setPrefWidth(20);
-            hapus.setPrefHeight(35);
-            hapus.getStyleClass().add("tombolRM");
-            hapus.setOnAction(env -> {
-                ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                deleteTask();
-            });
-            StackPane exx = new StackPane(hapus);
-            exx.setPrefWidth(5);
-            exx.setPadding(new Insets(0, 2, 0, 2));
-    
-            // commit feat : buat tombol edit textfield
-            Image tulis = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
-            ImageView nulis = new ImageView(tulis);
-            nulis.setFitWidth(65);
-            nulis.setFitHeight(65);
-            Button write = new Button();
-            write.setGraphic(nulis);
-            write.setPrefWidth(20);
-            write.setPrefHeight(35);
-            write.getStyleClass().add("tombolRM");
-            write.setOnAction(env -> {
-                ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                taskTF.setEditable(true);
-            });
-            StackPane menulis = new StackPane(write);
-            menulis.setPrefWidth(5);
-            menulis.setPadding(new Insets(0, 2, 0, 2));
-    
-            VBox tombolCttn = new VBox(menulis, exx);
-            tombolCttn.setSpacing(25);
-    
-            HBox creabox = new HBox(taskTF, tombolCttn);
-            creabox.setAlignment(Pos.CENTER);
-            creabox.setSpacing(10);
-            creabox.setPadding(new Insets(30, 10, 35, 10));
-    
-            tugasBox.getChildren().add(creabox);
+                evn.consume();
+                taskTF.setEditable(false);
+            }
+        });
+
+        // commit feat : buat tombol silang/hapus
+        Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
+        ImageView kali = new ImageView(silang);
+        kali.setFitWidth(65);
+        kali.setFitHeight(65);
+        Button hapus = new Button(null, kali);
+        hapus.setPrefWidth(20);
+        hapus.setPrefHeight(35);
+        hapus.getStyleClass().add("tombolRM");
+        hapus.setOnAction(env -> {
+            ControllerDB.deleteCatatan(getId(), taskTF.getText());
+            deleteTask(notes.size());
+        });
+        StackPane exx = new StackPane(hapus);
+        exx.setPrefWidth(5);
+        exx.setPadding(new Insets(0, 2, 0, 2));
+
+        // commit feat : buat tombol edit textfield
+        Image tulis = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
+        ImageView nulis = new ImageView(tulis);
+        nulis.setFitWidth(65);
+        nulis.setFitHeight(65);
+        Button write = new Button();
+        write.setGraphic(nulis);
+        write.setPrefWidth(20);
+        write.setPrefHeight(35);
+        write.getStyleClass().add("tombolRM");
+        write.setOnAction(env -> {
+            ControllerDB.deleteCatatan(getId(), taskTF.getText());
+            taskTF.setEditable(true);
+        });
+        StackPane menulis = new StackPane(write);
+        menulis.setPrefWidth(5);
+        menulis.setPadding(new Insets(0, 2, 0, 2));
+
+        VBox tombolCttn = new VBox(menulis, exx);
+        tombolCttn.setSpacing(25);
+
+        HBox creabox = new HBox(taskTF, tombolCttn);
+        creabox.setAlignment(Pos.CENTER);
+        creabox.setSpacing(10);
+        creabox.setPadding(new Insets(30, 10, 35, 10));
+
+        tugasBox.getChildren().add(creabox);
     }
 
     @Override
-    public void deleteTask() {
-        if (textAracount > 0) {
-            tugasBox.getChildren().remove(textAracount - 1);
-            textAracount--;
+    public void deleteTask(int i) {
+        if (notes.size() >= 0) {
+            tugasBox.getChildren().remove(i);
+            notes.remove(i);
         }
 
-        if (tugasBox.getChildren().isEmpty()) {
+        if (notes.isEmpty()) {
             Label kosonglb = new Label("                           Tidak ada catatan terbaru");
             kosonglb.getStyleClass().add("kosongg");
             tugasBox.getChildren().add(kosonglb);
             tugasBox.setAlignment(Pos.TOP_LEFT);
             tugasBox.setSpacing(5);
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
+        }
+        updateVBox();
+    }
+
+    private void updateVBox() {
+        tugasBox.getChildren().clear();
+        notes.addAll(ControllerDB.getAllCatatan(getId()));
+        try {
+            // if (tugasBox.getChildren().isEmpty()) {
+            //     Label kosonglb = new Label("                           Tidak ada catatan terbaru");
+            //     kosonglb.getStyleClass().add("kosongg");
+            //     tugasBox.getChildren().add(kosonglb);
+            //     tugasBox.setAlignment(Pos.TOP_LEFT);
+            //     tugasBox.setSpacing(5);
+            //     tugasBox.setPadding(new Insets(30, 10, 35, 10));
+            // }
+            for (int i = 0; i < notes.size(); i++) {
+                final int index = i;
+                // buat container judul tugas
+                TextArea taskTF = new TextArea();
+                taskTF.setEditable(false);
+                taskTF.setText(notes.get(i));
+                taskTF.setPromptText("Catatan " + notes.size());
+                taskTF.getStyleClass().add("noteTF");
+                taskTF.setPrefWidth(9000);
+                taskTF.setWrapText(true);
+                KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
+                taskTF.setOnKeyPressed(evn -> {
+                    if (saveCombination.match(evn)) {
+                        taskTF.setEditable(false);
+                        if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
+                            System.out.println("apa");
+                            ControllerDB.updateCatatan(getId(), taskTF.getText());
+                        } else {
+                            ControllerDB.insertCatatan(getId(), taskTF.getText());
+                        }
+                        evn.consume();
+                    }
+                });
+
+                // commit feat : buat tombol silang/hapus
+                Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
+                ImageView kali = new ImageView(silang);
+                kali.setFitWidth(65);
+                kali.setFitHeight(65);
+                Button hapus = new Button(null, kali);
+                hapus.setPrefWidth(20);
+                hapus.setPrefHeight(35);
+                hapus.getStyleClass().add("tombolRM");
+                hapus.setOnAction(env -> {
+                    ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                    deleteTask(index);
+                });
+                StackPane exx = new StackPane(hapus);
+                exx.setPrefWidth(5);
+                exx.setPadding(new Insets(0, 2, 0, 2));
+
+                // commit feat : buat tombol edit textfield
+                Image tulis = new Image(getClass().getClassLoader().getResourceAsStream("img/tulis.png"));
+                ImageView nulis = new ImageView(tulis);
+                nulis.setFitWidth(65);
+                nulis.setFitHeight(65);
+                Button write = new Button();
+                write.setGraphic(nulis);
+                write.setPrefWidth(20);
+                write.setPrefHeight(35);
+                write.getStyleClass().add("tombolRM");
+                write.setOnAction(env -> {
+                    ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                    taskTF.setEditable(true);
+                });
+                StackPane menulis = new StackPane(write);
+                menulis.setPrefWidth(5);
+                menulis.setPadding(new Insets(0, 2, 0, 2));
+
+                VBox tombolCttn = new VBox(menulis, exx);
+                tombolCttn.setSpacing(25);
+
+                HBox creabox = new HBox(taskTF, tombolCttn);
+                creabox.setAlignment(Pos.CENTER);
+                creabox.setSpacing(10);
+                creabox.setPadding(new Insets(30, 10, 35, 10));
+
+                tugasBox.getChildren().add(creabox);
+                tugasBox.setAlignment(Pos.CENTER);
+            }
+        } catch (Exception e) {
+            Label kosonglb = new Label("                           Tidak ada catatan terbaru");
+            kosonglb.getStyleClass().add("kosongg");
+            tugasBox.getChildren().add(kosonglb);
+            tugasBox.setAlignment(Pos.TOP_LEFT);
+            tugasBox.setSpacing(5);
+            tugasBox.setPadding(new Insets(30, 10, 35, 10));
+            tugasBox.setAlignment(Pos.CENTER);
         }
     }
 }
