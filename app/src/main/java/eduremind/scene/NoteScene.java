@@ -177,9 +177,9 @@ public class NoteScene {
         plus.setPrefHeight(58);
         plus.setAlignment(Pos.BOTTOM_RIGHT);
         plus.getStyleClass().add("plusback");
-        // plus.setOnAction(env -> {
-        //     createTA();
-        // });
+        plus.setOnAction(env -> {
+            createTA();
+        });
 
         HBox plusbackbox = new HBox(back, plus);
         plusbackbox.setSpacing(869);
@@ -202,10 +202,10 @@ public class NoteScene {
         lonPutih.setFitHeight(90);
         Button penginfgta = new Button(null, lonPutih);
         penginfgta.getStyleClass().add("sidebarBut");
-        // penginfgta.setOnAction(env -> {
-        //     ReminderScene reminderScene = new ReminderScene(stage, getId());
-        //     reminderScene.show();
-        // });
+        penginfgta.setOnAction(env -> {
+            ReminderScene reminderScene = new ReminderScene(stage, getId());
+            reminderScene.show();
+        });
         StackPane pengingat = new StackPane(penginfgta);
         pengingat.setAlignment(Pos.CENTER);
 
