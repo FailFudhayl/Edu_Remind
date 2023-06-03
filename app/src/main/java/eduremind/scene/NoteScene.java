@@ -61,8 +61,8 @@ public class NoteScene {
         logobox.setAlignment(Pos.CENTER);
         logobox.setPadding(new Insets(32, 540, 66, 300));
 
-        // root.setTop(logobox);
-        // BorderPane.setAlignment(logobox, Pos.CENTER);
+        root.setTop(logobox);
+        BorderPane.setAlignment(logobox, Pos.CENTER);
 
         // // tampilkan jika kosong
         // // Label kosonglb = new Label(" Tidak ada catatan terbaru");
