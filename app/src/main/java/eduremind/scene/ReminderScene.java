@@ -100,7 +100,7 @@ public class ReminderScene extends CreateDeleteTask{
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
-                    deleteTF();
+                    deleteTask();
                     ControllerDB.deleteTugas(getId(), taskTF.getText());
                 });
                 StackPane exx = new StackPane(hapus);
