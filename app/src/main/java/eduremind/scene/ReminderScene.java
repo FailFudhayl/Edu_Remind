@@ -2,6 +2,7 @@ package eduremind.scene;
 
 import java.util.ArrayList;
 
+import eduremind.Create_Delete_Task.CreateDeleteTask;
 import eduremind.controller.ControllerDB;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,7 +19,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class ReminderScene {
+public class ReminderScene extends CreateDeleteTask{
     // HANDLING STAGE
     private Stage stage;
     // handling container dan method textfield yang ingin dibuat
