@@ -39,12 +39,12 @@ public class NoteScene {
     }
 
     public void show() {
-        // // Init VBOX
-        // tugasBox = new VBox();
-        // // init borderpane
-        // BorderPane root = new BorderPane();
-        // root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-        // root.getStyleClass().add("scene1");
+        // Init VBOX
+        tugasBox = new VBox();
+        // init borderpane
+        BorderPane root = new BorderPane();
+        root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        root.getStyleClass().add("scene1");
 
         // // Buat title & logo
         // Image logoss = new Image(getClass().getClassLoader().getResourceAsStream("img/notification.png"));
