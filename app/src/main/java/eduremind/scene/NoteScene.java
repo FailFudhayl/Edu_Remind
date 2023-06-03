@@ -244,14 +244,14 @@ public class NoteScene {
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
         }
 
-        // // borderpane margin
-        // BorderPane.setMargin(right, new Insets(5));
+        // borderpane margin
+        BorderPane.setMargin(right, new Insets(5));
 
-        // // init scene
-        // Scene remindScene = new Scene(noteBox, 1800, 800);
-        // remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
-        // stage.setScene(remindScene);
-        // stage.show();
+        // init scene
+        Scene remindScene = new Scene(noteBox, 1800, 800);
+        remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
+        stage.setScene(remindScene);
+        stage.show();
     }
 
     // public void createTA() {
