@@ -106,5 +106,53 @@
     -fx-text-fill: #215B63;
 }
 
+.eduW{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 56px;
+    -fx-text-fill: #232855;
+}
+
+.remindW{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 56px;
+    -fx-text-fill: #215B63;
+}
+
+.remindTF{
+    -fx-background-color:  #232855;
+    -fx-text-fill: #ffff;
+    -fx-border-color: #232855;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 600;
+    -fx-font-size: 28px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 30px 8px 30px 8px;
+    -fx-pref-width: 700;
+}
+
+.tombolRM{
+    -fx-padding: 5px 5px;
+    -fx-pref-width: 1;
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color:  #FFFFFF;
+}
+.tombolRM:hover{
+    -fx-padding: 5px 5px;
+    -fx-pref-width: 1;
+    -fx-background-color:  #FFFFFF;
+    -fx-border-color:  #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
+}
+
+
+
 
 
