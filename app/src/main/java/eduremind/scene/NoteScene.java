@@ -312,7 +312,14 @@ public class NoteScene extends CreateDeleteTask{
         tugasBox.getChildren().add(creabox);
     }
 
-    private void deleteTA() {
+    @Override
+    public void createTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
+    }
+
+    @Override
+    public void deleteTask() {
         if (textAracount > 0) {
             tugasBox.getChildren().remove(textAracount - 1);
             textAracount--;
@@ -326,17 +333,5 @@ public class NoteScene extends CreateDeleteTask{
             tugasBox.setSpacing(5);
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
         }
-    }
-
-    @Override
-    public void createTask() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
-    }
-
-    @Override
-    public void deleteTask() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteTask'");
     }
 }
