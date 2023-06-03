@@ -151,11 +151,11 @@ public class NoteScene {
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
             tugasBox.setAlignment(Pos.CENTER);
         }
-        // ScrollPane scroll = new ScrollPane(tugasBox);
-        // scroll.setFitToHeight(true);
-        // scroll.setFitToWidth(true);
-        // scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
-        // root.setCenter(scroll);
+        ScrollPane scroll = new ScrollPane(tugasBox);
+        scroll.setFitToHeight(true);
+        scroll.setFitToWidth(true);
+        scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
+        root.setCenter(scroll);
 
         // // buat tombol back and plus
         // Image arrow = new Image(getClass().getClassLoader().getResourceAsStream("img/Arrow.png"));
