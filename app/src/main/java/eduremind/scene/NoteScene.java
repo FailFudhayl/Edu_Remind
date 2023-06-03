@@ -196,32 +196,32 @@ public class NoteScene {
         right.getStyleClass().add("scene1");
         root.setRight(right);
 
-        // // membuat sidebar
-        // Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
-        // ImageView lonPutih = new ImageView(lonceng);
-        // lonPutih.setFitWidth(90);
-        // lonPutih.setFitHeight(90);
-        // Button penginfgta = new Button(null, lonPutih);
-        // penginfgta.getStyleClass().add("sidebarBut");
+        // membuat sidebar
+        Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
+        ImageView lonPutih = new ImageView(lonceng);
+        lonPutih.setFitWidth(90);
+        lonPutih.setFitHeight(90);
+        Button penginfgta = new Button(null, lonPutih);
+        penginfgta.getStyleClass().add("sidebarBut");
         // penginfgta.setOnAction(env -> {
         //     ReminderScene reminderScene = new ReminderScene(stage, getId());
         //     reminderScene.show();
         // });
-        // StackPane pengingat = new StackPane(penginfgta);
-        // pengingat.setAlignment(Pos.CENTER);
+        StackPane pengingat = new StackPane(penginfgta);
+        pengingat.setAlignment(Pos.CENTER);
 
-        // Image note = new Image(getClass().getClassLoader().getResourceAsStream("img/note_putih.png"));
-        // ImageView notePutih = new ImageView(note);
-        // notePutih.setFitWidth(97);
-        // notePutih.setFitHeight(97);
-        // Button catatan = new Button(null, notePutih);
-        // catatan.getStyleClass().add("sidebarBut");
+        Image note = new Image(getClass().getClassLoader().getResourceAsStream("img/note_putih.png"));
+        ImageView notePutih = new ImageView(note);
+        notePutih.setFitWidth(97);
+        notePutih.setFitHeight(97);
+        Button catatan = new Button(null, notePutih);
+        catatan.getStyleClass().add("sidebarBut");
         // catatan.setOnAction(env -> {
         //     NoteScene noteScene = new NoteScene(stage, getId());
         //     noteScene.show();
         // });
-        // StackPane notess = new StackPane(catatan);
-        // notess.setAlignment(Pos.CENTER);
+        StackPane notess = new StackPane(catatan);
+        notess.setAlignment(Pos.CENTER);
 
         // VBox sidebar = new VBox(40, pengingat, notess);
         // sidebar.getStyleClass().add("sidebar");
