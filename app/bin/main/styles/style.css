@@ -42,5 +42,61 @@
     -fx-background-color:  #FFFFFF;
 }
 
+.logBut{
+    -fx-background-color: #215B63;
+    -fx-text-fill: #ffff;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+.logBut:hover{
+    -fx-background-color: #ffff;
+    -fx-text-fill: #215B63;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 4px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+
+.regisbut{
+    -fx-background-color: #ffff;
+    -fx-text-fill: #215B63;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 4px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+.regisbut:hover{
+    -fx-background-color: #215B63;
+    -fx-text-fill: #ffff;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 20 100;
+    -fx-pref-width: 500;
+}
+
 
 
