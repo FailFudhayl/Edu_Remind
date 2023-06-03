@@ -39,6 +39,7 @@ public class ReminderScene extends CreateDeleteTask{
     public void show() {
         tugasBox = new VBox();
         tugasBox.getStyleClass().add("scene1");
+        tugasBox.setMaxWidth(1700);;
         // init borderpane
         BorderPane root = new BorderPane();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
@@ -57,7 +58,7 @@ public class ReminderScene extends CreateDeleteTask{
         HBox logobox = new HBox(mainLogos, title1, title2);
         logobox.setSpacing(10);
         logobox.setAlignment(Pos.CENTER);
-        logobox.setPadding(new Insets(32, 100, 66, 100));
+        logobox.setPadding(new Insets(32, 200, 66, 100));
 
         root.setTop(logobox);
         BorderPane.setAlignment(logobox, Pos.CENTER);
@@ -137,6 +138,7 @@ public class ReminderScene extends CreateDeleteTask{
         }
         ScrollPane scroll = new ScrollPane(tugasBox);
         scroll.getStyleClass().add("scene1");
+        scroll.setMaxWidth(1700);
         scroll.setFitToHeight(true);
         scroll.setFitToHeight(true);
         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
@@ -218,7 +220,7 @@ public class ReminderScene extends CreateDeleteTask{
 
         // init container utama
         HBox remindBox = new HBox(sidebar, root);
-        remindBox.setMaxWidth(1600);
+        remindBox.setMaxWidth(1800);
         remindBox.setMaxHeight(850);
         remindBox.getStyleClass().add("scene1");
 

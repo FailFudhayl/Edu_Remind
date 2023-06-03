@@ -210,7 +210,8 @@ public class NoteScene extends CreateDeleteTask{
         ImageView notePutih = new ImageView(note);
         notePutih.setFitWidth(97);
         notePutih.setFitHeight(97);
-        Button catatan = new Button(null, notePutih);
+        Button catatan = new Button();
+        catatan.setGraphic(notePutih);
         catatan.getStyleClass().add("sidebarBut");
         catatan.setOnAction(env -> {
             NoteScene noteScene = new NoteScene(stage, getId());
