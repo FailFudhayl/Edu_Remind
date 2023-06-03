@@ -324,4 +324,16 @@ public class ReminderScene extends CreateDeleteTask{
         }
 
     }
+
+    @Override
+    public void createTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
+    }
+
+    @Override
+    public void deleteTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteTask'");
+    }
 }
