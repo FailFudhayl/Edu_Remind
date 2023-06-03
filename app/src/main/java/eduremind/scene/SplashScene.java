@@ -35,7 +35,9 @@ public class SplashScene {
 
         //buat label loading
         Label loading = new Label("Please Wait");
+        loading.getStyleClass().add("eduW");
         Label titik = new Label("...");
+        titik.getStyleClass().add("remindW");
         HBox please = new HBox(loading, titik);
         please.setSpacing(10);
         please.setAlignment(Pos.CENTER);
