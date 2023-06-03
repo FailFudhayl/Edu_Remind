@@ -82,7 +82,7 @@ public class RegisterScene {
             String username = emailTF.getText();
             String password = passTF.getText();
             try {
-                if (ControllerDB.) {
+                if (ControllerDB.regisvalidation(username, password)) {
                     validLB.setText("Register Gagal");
                 } else {
                     ControllerDB.insrtRegis(username, password);
