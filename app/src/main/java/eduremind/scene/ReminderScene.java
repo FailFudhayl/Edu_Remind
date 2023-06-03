@@ -68,6 +68,7 @@ public class ReminderScene extends CreateDeleteTask{
                 // buat container judul tugas
                 // buat textfield untuk judul tugas
                 TextField taskTF = new TextField();
+                taskTF.setEditable(false);
                 taskTF.setText(task);
                 taskTF.setPromptText("Tugas " + textFieldcount);
                 taskTF.getStyleClass().add("remindTF");
@@ -92,8 +93,8 @@ public class ReminderScene extends CreateDeleteTask{
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
-                    deleteTask();
                     ControllerDB.deleteTugas(getId(), taskTF.getText());
+                    deleteTask();
                 });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);
@@ -109,6 +110,7 @@ public class ReminderScene extends CreateDeleteTask{
                 tulis.setPrefWidth(20);
                 tulis.setPrefHeight(35);
                 tulis.setOnAction(env -> {
+                    ControllerDB.deleteTugas(getId(), taskTF.getText());
                     taskTF.setEditable(true);
                 });
                 tulis.getStyleClass().add("tombolRM");
@@ -250,6 +252,7 @@ public class ReminderScene extends CreateDeleteTask{
         // buat container judul tugas
         // buat textfield untuk judul tugas
         TextField taskTF = new TextField();
+        taskTF.setEditable(false);
         taskTF.setPromptText("Tugas " + textFieldcount);
         taskTF.getStyleClass().add("remindTF");
         taskTF.setPrefWidth(9000);
@@ -273,8 +276,8 @@ public class ReminderScene extends CreateDeleteTask{
         hapus.setPrefHeight(35);
         hapus.getStyleClass().add("tombolRM");
         hapus.setOnAction(env -> {
-            deleteTask();
             ControllerDB.deleteTugas(getId(), taskTF.getText());
+            deleteTask();
         });
         StackPane exx = new StackPane(hapus);
         exx.setPrefWidth(5);
@@ -290,6 +293,7 @@ public class ReminderScene extends CreateDeleteTask{
         tulis.setPrefWidth(20);
         tulis.setPrefHeight(35);
         tulis.setOnAction(env -> {
+            ControllerDB.deleteTugas(getId(), taskTF.getText());
             taskTF.setEditable(true);
         });
         tulis.getStyleClass().add("tombolRM");

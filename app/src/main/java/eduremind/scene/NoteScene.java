@@ -71,6 +71,7 @@ public class NoteScene extends CreateDeleteTask{
             for (String note : notes) {
                 // buat container judul tugas
                 TextArea taskTF = new TextArea();
+                taskTF.setEditable(false);
                 taskTF.setPromptText("Catatan " + textAracount);
                 taskTF.setText(note);
                 taskTF.getStyleClass().add("noteTF");
@@ -80,6 +81,7 @@ public class NoteScene extends CreateDeleteTask{
                 taskTF.setOnKeyPressed(evn -> {
                     if (saveCombination.match(evn)) {
                         if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
+                            System.out.println("apa");
                             ControllerDB.updateCatatan(getId(), taskTF.getText());
                         } else {
                             ControllerDB.insertCatatan(getId(), taskTF.getText());
@@ -99,8 +101,8 @@ public class NoteScene extends CreateDeleteTask{
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
-                    createTask();
                     ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                    deleteTask();
                 });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);
@@ -117,8 +119,8 @@ public class NoteScene extends CreateDeleteTask{
                 write.setPrefHeight(35);
                 write.getStyleClass().add("tombolRM");
                 write.setOnAction(env -> {
-                    taskTF.setEditable(true);
                     ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                    taskTF.setEditable(true);
                 });
                 StackPane menulis = new StackPane(write);
                 menulis.setPrefWidth(5);
@@ -257,6 +259,7 @@ public class NoteScene extends CreateDeleteTask{
     
             // buat container judul tugas
             TextArea taskTF = new TextArea();
+            taskTF.setEditable(false);
             taskTF.setPromptText("Catatan " + textAracount);
             taskTF.getStyleClass().add("noteTF");
             taskTF.setPrefWidth(9000);
@@ -288,8 +291,8 @@ public class NoteScene extends CreateDeleteTask{
             hapus.setPrefHeight(35);
             hapus.getStyleClass().add("tombolRM");
             hapus.setOnAction(env -> {
-                deleteTask();
                 ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                deleteTask();
             });
             StackPane exx = new StackPane(hapus);
             exx.setPrefWidth(5);
@@ -306,8 +309,8 @@ public class NoteScene extends CreateDeleteTask{
             write.setPrefHeight(35);
             write.getStyleClass().add("tombolRM");
             write.setOnAction(env -> {
-                taskTF.setEditable(true);
                 ControllerDB.deleteCatatan(getId(), taskTF.getText());
+                taskTF.setEditable(true);
             });
             StackPane menulis = new StackPane(write);
             menulis.setPrefWidth(5);
