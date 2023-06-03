@@ -166,7 +166,7 @@ public class NoteScene extends CreateDeleteTask{
         plus.setAlignment(Pos.BOTTOM_RIGHT);
         plus.getStyleClass().add("plusback");
         plus.setOnAction(env -> {
-            createTA();
+            createTask();
         });
 
         HBox plusbackbox = new HBox(back, plus);
