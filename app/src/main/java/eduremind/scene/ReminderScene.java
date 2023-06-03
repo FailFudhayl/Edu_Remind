@@ -246,7 +246,8 @@ public class ReminderScene extends CreateDeleteTask{
         stage.show();
     }
 
-    private void createTF() {
+    @Override
+    public void createTask() {
         if (tugasBox.getChildren().get(0) instanceof Label) {
             tugasBox.getChildren().remove(0);
         }
@@ -275,7 +276,7 @@ public class ReminderScene extends CreateDeleteTask{
         hapus.setPrefHeight(35);
         hapus.getStyleClass().add("tombolRM");
         hapus.setOnAction(env -> {
-            deleteTF();
+            deleteTask();
             ControllerDB.deleteTugas(getId(), taskTF.getText());
         });
         StackPane exx = new StackPane(hapus);
@@ -306,12 +307,6 @@ public class ReminderScene extends CreateDeleteTask{
         creaBox.setPadding(new Insets(30, 10, 35, 10));
 
         tugasBox.getChildren().add(creaBox);
-    }
-
-    @Override
-    public void createTask() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
     }
 
     @Override
