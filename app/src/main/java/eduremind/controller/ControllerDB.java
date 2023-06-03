@@ -163,4 +163,20 @@ public class ControllerDB extends ConnectDB {
             e.printStackTrace();
         }
     }
+
+    public static boolean foundCatatan(Integer userid, String Catatan) {
+        connection();
+        query = "SELECT userid, catatan FROM catatanTB WHERE userid=? AND catatan=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, Catatan);
+            try(ResultSet login = preparedStatement.executeQuery()){
+                return login.next();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
