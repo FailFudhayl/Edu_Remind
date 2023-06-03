@@ -42,6 +42,7 @@ public class NoteScene extends CreateDeleteTask{
     public void show() {
         // Init VBOX
         tugasBox = new VBox();
+        tugasBox.getStyleClass().add("scene1");
         // init borderpane
         BorderPane root = new BorderPane();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
@@ -86,7 +87,6 @@ public class NoteScene extends CreateDeleteTask{
                         evn.consume();
                         taskTF.setEditable(false);
                     }
-                    ControllerDB.insertCatatan(getId(), taskTF.getText());
                 });
 
                 // commit feat : buat tombol silang/hapus
@@ -118,6 +118,7 @@ public class NoteScene extends CreateDeleteTask{
                 write.getStyleClass().add("tombolRM");
                 write.setOnAction(env -> {
                     taskTF.setEditable(true);
+                    ControllerDB.deleteCatatan(getId(), taskTF.getText());
                 });
                 StackPane menulis = new StackPane(write);
                 menulis.setPrefWidth(5);
@@ -144,6 +145,7 @@ public class NoteScene extends CreateDeleteTask{
             tugasBox.setAlignment(Pos.CENTER);
         }
         ScrollPane scroll = new ScrollPane(tugasBox);
+        scroll.getStyleClass().add("scene1");
         scroll.setFitToHeight(true);
         scroll.setFitToWidth(true);
         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
@@ -266,10 +268,14 @@ public class NoteScene extends CreateDeleteTask{
             KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
             taskTF.setOnKeyPressed(evn -> {
                 if (saveCombination.match(evn)) {
-                    taskTF.setEditable(false);
+                    if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
+                        ControllerDB.updateCatatan(getId(), taskTF.getText());
+                    } else {
+                        ControllerDB.insertCatatan(getId(), taskTF.getText());
+                    }
                     evn.consume();
+                    taskTF.setEditable(false);
                 }
-                ControllerDB.insertCatatan(getId(), taskTF.getText());
             });
     
             // commit feat : buat tombol silang/hapus
@@ -301,6 +307,7 @@ public class NoteScene extends CreateDeleteTask{
             write.getStyleClass().add("tombolRM");
             write.setOnAction(env -> {
                 taskTF.setEditable(true);
+                ControllerDB.deleteCatatan(getId(), taskTF.getText());
             });
             StackPane menulis = new StackPane(write);
             menulis.setPrefWidth(5);
