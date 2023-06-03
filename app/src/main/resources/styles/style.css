@@ -191,6 +191,16 @@
     -fx-text-fill: #232855;
 }
 
+.plusback{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+}
+.plusback:hover{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
+}
+
 
 
 
