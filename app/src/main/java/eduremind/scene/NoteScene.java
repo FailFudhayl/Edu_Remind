@@ -325,19 +325,19 @@ public class NoteScene {
         tugasBox.getChildren().add(creabox);
     }
 
-    // private void deleteTA() {
-    //     if (textAracount > 0) {
-    //         tugasBox.getChildren().remove(textAracount - 1);
-    //         textAracount--;
-    //     }
+    private void deleteTA() {
+        if (textAracount > 0) {
+            tugasBox.getChildren().remove(textAracount - 1);
+            textAracount--;
+        }
 
-    //     if (tugasBox.getChildren().isEmpty()) {
-    //         Label kosonglb = new Label("                           Tidak ada catatan terbaru");
-    //         kosonglb.getStyleClass().add("kosongg");
-    //         tugasBox.getChildren().add(kosonglb);
-    //         tugasBox.setAlignment(Pos.TOP_LEFT);
-    //         tugasBox.setSpacing(5);
-    //         tugasBox.setPadding(new Insets(30, 10, 35, 10));
-    //     }
-    // }
+        if (tugasBox.getChildren().isEmpty()) {
+            Label kosonglb = new Label("                           Tidak ada catatan terbaru");
+            kosonglb.getStyleClass().add("kosongg");
+            tugasBox.getChildren().add(kosonglb);
+            tugasBox.setAlignment(Pos.TOP_LEFT);
+            tugasBox.setSpacing(5);
+            tugasBox.setPadding(new Insets(30, 10, 35, 10));
+        }
+    }
 }
