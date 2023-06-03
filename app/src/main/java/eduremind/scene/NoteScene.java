@@ -170,14 +170,14 @@ public class NoteScene {
         //     loginScene.show();
         // });
 
-        // Image tambah = new Image(getClass().getClassLoader().getResourceAsStream("img/Plus.png"));
-        // ImageView pluslus = new ImageView(tambah);
-        // Button plus = new Button();
-        // plus.setGraphic(pluslus);
-        // plus.setPrefWidth(61);
-        // plus.setPrefHeight(58);
-        // plus.setAlignment(Pos.BOTTOM_RIGHT);
-        // plus.getStyleClass().add("plusback");
+        Image tambah = new Image(getClass().getClassLoader().getResourceAsStream("img/Plus.png"));
+        ImageView pluslus = new ImageView(tambah);
+        Button plus = new Button();
+        plus.setGraphic(pluslus);
+        plus.setPrefWidth(61);
+        plus.setPrefHeight(58);
+        plus.setAlignment(Pos.BOTTOM_RIGHT);
+        plus.getStyleClass().add("plusback");
         // plus.setOnAction(env -> {
         //     createTA();
         // });
