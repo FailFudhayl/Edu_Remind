@@ -167,6 +167,22 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 13, 0.3, 0, 2);
 }
 
+.noteTF{
+    -fx-background-color:  rgba(35, 40, 85, 0.15);;
+    -fx-text-fill: #215B63;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 600;
+    -fx-font-size: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 8px;
+    -fx-pref-width: 1000;
+}
+
 
 
 
