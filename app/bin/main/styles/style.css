@@ -183,6 +183,14 @@
     -fx-pref-width: 1000;
 }
 
+.kosongg{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 680;
+    -fx-font-size: 40px;
+    -fx-text-fill: #232855;
+}
+
 
 
 
