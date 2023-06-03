@@ -88,13 +88,13 @@ public class NoteScene {
                 taskTF.setPrefWidth(9000);
                 taskTF.setWrapText(true);
                 KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
-                // taskTF.setOnKeyPressed(evn -> {
-                //     if (saveCombination.match(evn)) {
-                //         taskTF.setEditable(false);
-                //         evn.consume();
-                //     }
-                //     ControllerDB.insertCatatan(getId(), taskTF.getText());
-                // });
+                taskTF.setOnKeyPressed(evn -> {
+                    if (saveCombination.match(evn)) {
+                        taskTF.setEditable(false);
+                        evn.consume();
+                    }
+                    ControllerDB.insertCatatan(getId(), taskTF.getText());
+                });
 
                 // commit feat : buat tombol silang/hapus
                 Image silang = new Image(getClass().getClassLoader().getResourceAsStream("img/Silang.png"));
