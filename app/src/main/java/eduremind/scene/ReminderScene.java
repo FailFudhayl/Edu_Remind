@@ -61,19 +61,6 @@ public class ReminderScene extends CreateDeleteTask{
         root.setTop(logobox);
         BorderPane.setAlignment(logobox, Pos.CENTER);
 
-        // tampilkan jika kosong
-        // Label kosonglb = new Label(" Tidak ada tugas terbaru");
-        // kosonglb.getStyleClass().add("kosongg");
-        // tugasBox = new VBox();
-        // tugasBox.getStyleClass().add("scene1");
-        // tugasBox.setMaxWidth(1800);
-        // tugasBox.setAlignment(Pos.CENTER);
-        // if(tugasBox.getChildren().isEmpty()){
-        // tugasBox.getChildren().add(kosonglb);
-        // tugasBox.setAlignment(Pos.TOP_LEFT);
-        // tugasBox.setSpacing(5);
-        // tugasBox.setPadding(new Insets(30, 10, 35, 10));
-        // }
         try {
             ArrayList<String> tasks = ControllerDB.getAllTugas(getId());
             for (String task : tasks) {

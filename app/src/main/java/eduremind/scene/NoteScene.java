@@ -2,6 +2,7 @@ package eduremind.scene;
 
 import java.util.ArrayList;
 
+import eduremind.Create_Delete_Task.CreateDeleteTask;
 import eduremind.controller.ControllerDB;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -21,7 +22,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class NoteScene {
+public class NoteScene extends CreateDeleteTask{
     // HANDLING STAGE
     private Stage stage;
     private int id;
@@ -64,19 +65,6 @@ public class NoteScene {
         root.setTop(logobox);
         BorderPane.setAlignment(logobox, Pos.CENTER);
 
-        // tampilkan jika kosong
-        // Label kosonglb = new Label(" Tidak ada catatan terbaru");
-        // kosonglb.getStyleClass().add("kosongg");
-        // tugasBox = new VBox();
-        // tugasBox.getStyleClass().add("scene1");
-        // tugasBox.setMaxWidth(1800);
-        // tugasBox.setAlignment(Pos.CENTER);
-        // if(tugasBox.getChildren().isEmpty()){
-        // tugasBox.getChildren().add(kosonglb);
-        // tugasBox.setAlignment(Pos.TOP_LEFT);
-        // tugasBox.setSpacing(5);
-        // tugasBox.setPadding(new Insets(30, 10, 35, 10));
-        // }
         try {
             ArrayList<String> notes = ControllerDB.getAllCatatan(getId());
             for (String note : notes) {
@@ -338,5 +326,17 @@ public class NoteScene {
             tugasBox.setSpacing(5);
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
         }
+    }
+
+    @Override
+    public void createTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
+    }
+
+    @Override
+    public void deleteTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteTask'");
     }
 }
