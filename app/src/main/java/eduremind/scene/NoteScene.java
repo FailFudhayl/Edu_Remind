@@ -123,10 +123,9 @@ public class NoteScene {
                 write.setPrefWidth(20);
                 write.setPrefHeight(35);
                 write.getStyleClass().add("tombolRM");
-                // write.setOnAction(env -> {
-                //     taskTF.setEditable(true);
-                //     ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                // });
+                write.setOnAction(env -> {
+                    taskTF.setEditable(true);
+                });
                 StackPane menulis = new StackPane(write);
                 menulis.setPrefWidth(5);
                 menulis.setPadding(new Insets(0, 2, 0, 2));
