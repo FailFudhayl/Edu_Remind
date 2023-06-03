@@ -296,7 +296,6 @@ public class NoteScene extends CreateDeleteTask{
             write.getStyleClass().add("tombolRM");
             write.setOnAction(env -> {
                 taskTF.setEditable(true);
-                ControllerDB.updateCatatan(getId(), taskTF.getText());
             });
             StackPane menulis = new StackPane(write);
             menulis.setPrefWidth(5);
