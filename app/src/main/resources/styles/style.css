@@ -98,5 +98,13 @@
     -fx-pref-width: 500;
 }
 
+.rgisLB{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 400;
+    -fx-font-size: 22px;
+    -fx-text-fill: #215B63;
+}
+
 
 
