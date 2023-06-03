@@ -164,6 +164,22 @@ public class ControllerDB extends ConnectDB {
         }
     }
 
+    public static boolean regisvalidation(String username, String password) {
+        connection();
+        query = "SELECT name, pass catatan FROM userTB WHERE name=? AND pass=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            try(ResultSet login = preparedStatement.executeQuery()){
+                return login.next();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public static boolean foundCatatan(Integer userid, String Catatan) {
         connection();
         query = "SELECT userid, catatan FROM catatanTB WHERE userid=? AND catatan=?";

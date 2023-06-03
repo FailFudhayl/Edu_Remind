@@ -82,22 +82,26 @@ public class RegisterScene {
             String username = emailTF.getText();
             String password = passTF.getText();
             try {
-                ControllerDB.insrtRegis(username, password);
-                validLB.setText("Register Berhasil");
-                Thread validThread = new Thread(() -> {
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-        
-                    Platform.runLater(() -> {
-                        stage.close();
-                    LoginScene loginScene = new LoginScene(stage);
-                    loginScene.show();
+                if (ControllerDB.) {
+                    validLB.setText("Register Gagal");
+                } else {
+                    ControllerDB.insrtRegis(username, password);
+                    validLB.setText("Register Berhasil");
+                    Thread validThread = new Thread(() -> {
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+            
+                        Platform.runLater(() -> {
+                            stage.close();
+                        LoginScene loginScene = new LoginScene(stage);
+                        loginScene.show();
+                        });
                     });
-                });
-                validThread.start();
+                    validThread.start();
+                }
             } catch (Exception e) {
                 validLB.setText("Register Gagal");
             }
