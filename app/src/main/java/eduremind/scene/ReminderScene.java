@@ -2,6 +2,7 @@ package eduremind.scene;
 
 import eduremind.Create_Delete_Task.CreateDeleteTask;
 import eduremind.controller.ControllerDB;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -206,7 +207,11 @@ public class ReminderScene extends CreateDeleteTask {
         hapus.getStyleClass().add("tombolRM");
         hapus.setOnAction(env -> {
             ControllerDB.deleteTugas(getId(), taskTF.getText());
-            deleteTask(tasks.size());
+            // deleteTask(index);
+            // tasks.removeAll();
+            // tasks.setAll(ControllerDB.getAllTugas(this.getId()));
+            ReminderScene reminderScene = new ReminderScene(stage, this.getId());
+            reminderScene.show();
         });
         StackPane exx = new StackPane(hapus);
         exx.setPrefWidth(5);
@@ -240,12 +245,14 @@ public class ReminderScene extends CreateDeleteTask {
 
     @Override
     public void deleteTask(int i) {
-        System.out.println(i);
-
+        // System.out.println(i);
+        // System.out.println("Task size:" + tasks.size());
+        
         if (tasks.size() >= 0) {
             tugasBox.getChildren().remove(i);
             tasks.remove(i);
         }
+        // System.out.println("Task size after:" + tasks.size());
 
         if (tasks.isEmpty()) {
             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
@@ -301,7 +308,11 @@ public class ReminderScene extends CreateDeleteTask {
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
                     ControllerDB.deleteTugas(getId(), taskTF.getText());
-                    deleteTask(index);
+                    // deleteTask(index);
+                    // tasks.removeAll();
+                    // tasks.setAll(ControllerDB.getAllTugas(this.getId()));
+                    ReminderScene reminderScene = new ReminderScene(stage, this.getId());
+                    reminderScene.show();
                 });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);

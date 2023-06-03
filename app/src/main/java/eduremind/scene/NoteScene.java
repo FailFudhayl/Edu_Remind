@@ -193,13 +193,13 @@ public class NoteScene extends CreateDeleteTask {
         KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
         taskTF.setOnKeyPressed(evn -> {
             if (saveCombination.match(evn)) {
+                taskTF.setEditable(false);
                 if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
                     ControllerDB.updateCatatan(getId(), taskTF.getText());
                 } else {
                     ControllerDB.insertCatatan(getId(), taskTF.getText());
                 }
                 evn.consume();
-                taskTF.setEditable(false);
             }
         });
 
@@ -214,7 +214,8 @@ public class NoteScene extends CreateDeleteTask {
         hapus.getStyleClass().add("tombolRM");
         hapus.setOnAction(env -> {
             ControllerDB.deleteCatatan(getId(), taskTF.getText());
-            deleteTask(notes.size());
+            NoteScene noteScene = new NoteScene(stage, this.getId());
+            noteScene.show();
         });
         StackPane exx = new StackPane(hapus);
         exx.setPrefWidth(5);
@@ -308,13 +309,18 @@ public class NoteScene extends CreateDeleteTask {
                 ImageView kali = new ImageView(silang);
                 kali.setFitWidth(65);
                 kali.setFitHeight(65);
-                Button hapus = new Button(null, kali);
+                Button hapus = new Button();
+                hapus.setGraphic(kali);
                 hapus.setPrefWidth(20);
                 hapus.setPrefHeight(35);
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
                     ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                    deleteTask(index);
+                    // deleteTask(index);
+                    // tasks.removeAll();
+                    // tasks.setAll(ControllerDB.getAllTugas(this.getId()));
+                    NoteScene noteScene = new NoteScene(stage, this.getId());
+                    noteScene.show();
                 });
                 StackPane exx = new StackPane(hapus);
                 exx.setPrefWidth(5);
