@@ -73,7 +73,11 @@ public class ReminderScene extends CreateDeleteTask{
                 taskTF.setPrefWidth(9000);
                 taskTF.setOnAction(env -> {
                     taskTF.setEditable(false);
-                    ControllerDB.insertTugas(getId(), taskTF.getText());
+                    if (ControllerDB.foundTugas(getId(), taskTF.getText())) {
+                        ControllerDB.updateTugas(getId(), taskTF.getText());
+                    } else {
+                        ControllerDB.insertTugas(getId(), taskTF.getText());
+                    }
                 });
 
                 // commit feat : buat tombol silang/hapus
@@ -249,7 +253,11 @@ public class ReminderScene extends CreateDeleteTask{
         taskTF.setPrefWidth(9000);
         taskTF.setOnAction(env -> {
             taskTF.setEditable(false);
-            ControllerDB.insertTugas(getId(), taskTF.getText());
+            if (ControllerDB.foundTugas(getId(), taskTF.getText())) {
+                ControllerDB.updateTugas(getId(), taskTF.getText());
+            } else {
+                ControllerDB.insertTugas(getId(), taskTF.getText());
+            }
         });
 
         // commit feat : buat tombol silang/hapus
