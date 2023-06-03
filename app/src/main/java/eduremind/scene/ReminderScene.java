@@ -42,6 +42,7 @@ public class ReminderScene extends CreateDeleteTask {
         tugasBox = new VBox();
         tugasBox.getStyleClass().add("scene1");
         tugasBox.setMaxWidth(1700);
+        tugasBox.minWidth(1700);
         // init borderpane
         BorderPane root = new BorderPane();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
@@ -157,11 +158,13 @@ public class ReminderScene extends CreateDeleteTask {
 
         if (tugasBox.getChildren().isEmpty()) {
             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
+            kosonglb.setMinWidth(800);
             kosonglb.getStyleClass().add("kosongg");
             tugasBox.getChildren().add(kosonglb);
             tugasBox.setAlignment(Pos.TOP_LEFT);
             tugasBox.setSpacing(5);
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
+            tugasBox.setMinWidth(800);
         }
 
         // borderpane margin
@@ -185,7 +188,7 @@ public class ReminderScene extends CreateDeleteTask {
         taskTF.setEditable(false);
         taskTF.setPromptText("Tugas " + tasks.size());
         taskTF.getStyleClass().add("remindTF");
-        taskTF.setPrefWidth(9000);
+        taskTF.setMinWidth(800);
         taskTF.setOnAction(env -> {
             taskTF.setEditable(false);
             if (ControllerDB.foundTugas(getId(), taskTF.getText())) {
@@ -241,6 +244,7 @@ public class ReminderScene extends CreateDeleteTask {
         creaBox.setPadding(new Insets(30, 10, 35, 10));
 
         tugasBox.getChildren().add(creaBox);
+        tugasBox.setMinWidth(800);
     }
 
     @Override
@@ -250,6 +254,7 @@ public class ReminderScene extends CreateDeleteTask {
         
         if (tasks.size() >= 0) {
             tugasBox.getChildren().remove(i);
+            tugasBox.setMinWidth(800);
             tasks.remove(i);
         }
         // System.out.println("Task size after:" + tasks.size());
@@ -257,6 +262,7 @@ public class ReminderScene extends CreateDeleteTask {
         if (tasks.isEmpty()) {
             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
             kosonglb.getStyleClass().add("kosongg");
+            kosonglb.setMinWidth(800);
             tugasBox.getChildren().add(kosonglb);
             tugasBox.setAlignment(Pos.TOP_LEFT);
             tugasBox.setSpacing(5);
@@ -343,10 +349,12 @@ public class ReminderScene extends CreateDeleteTask {
 
                 tugasBox.getChildren().add(creaBox);
                 tugasBox.setAlignment(Pos.CENTER);
+                tugasBox.setMinWidth(800);
             }
         } catch (Exception e) {
             Label kosonglb = new Label("                           Tidak ada tugas terbaru");
             kosonglb.getStyleClass().add("kosongg");
+            kosonglb.setMinWidth(800);
             tugasBox.getChildren().add(kosonglb);
             tugasBox.setAlignment(Pos.TOP_LEFT);
             tugasBox.setSpacing(5);
