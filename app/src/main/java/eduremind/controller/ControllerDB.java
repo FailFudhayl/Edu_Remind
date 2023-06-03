@@ -179,4 +179,20 @@ public class ControllerDB extends ConnectDB {
         }
         return false;
     }
+
+    public static boolean foundTugas(Integer userid, String tugas) {
+        connection();
+        query = "SELECT userid, tugas FROM tugasTB WHERE userid=? AND tugas=?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, userid);
+            preparedStatement.setString(2, tugas);
+            try(ResultSet login = preparedStatement.executeQuery()){
+                return login.next();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
