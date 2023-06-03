@@ -14,3 +14,27 @@
     -fx-text-fill: #232855;
 }
 
+.loginLB{
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 700;
+    -fx-font-size: 28px;
+    -fx-text-fill:  #215B63;
+}
+
+.loginTF{
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-text-fill: #215B63;
+    -fx-border-color: #215B63;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-style: normal ;
+    -fx-font-weight: 380;
+    -fx-font-size: 28px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px 10px;
+    -fx-pref-width: 200;
+}
+
