@@ -308,7 +308,14 @@ public class ReminderScene extends CreateDeleteTask{
         tugasBox.getChildren().add(creaBox);
     }
 
-    private void deleteTF() {
+    @Override
+    public void createTask() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
+    }
+
+    @Override
+    public void deleteTask() {
         if (textFieldcount >= 0) {
             tugasBox.getChildren().remove(textFieldcount - 1);
             textFieldcount--;
@@ -322,18 +329,5 @@ public class ReminderScene extends CreateDeleteTask{
             tugasBox.setSpacing(5);
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
         }
-
-    }
-
-    @Override
-    public void createTask() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createTask'");
-    }
-
-    @Override
-    public void deleteTask() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteTask'");
     }
 }
