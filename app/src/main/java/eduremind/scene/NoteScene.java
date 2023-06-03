@@ -78,8 +78,13 @@ public class NoteScene extends CreateDeleteTask{
                 KeyCombination saveCombination = new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_DOWN);
                 taskTF.setOnKeyPressed(evn -> {
                     if (saveCombination.match(evn)) {
-                        taskTF.setEditable(false);
+                        if (ControllerDB.foundCatatan(getId(), taskTF.getText())) {
+                            ControllerDB.updateCatatan(getId(), taskTF.getText());
+                        } else {
+                            ControllerDB.insertCatatan(getId(), taskTF.getText());
+                        }
                         evn.consume();
+                        taskTF.setEditable(false);
                     }
                     ControllerDB.insertCatatan(getId(), taskTF.getText());
                 });
