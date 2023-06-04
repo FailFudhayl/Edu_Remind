@@ -186,7 +186,7 @@ public class NoteScene extends CreateDeleteTask {
         // buat container judul tugas
         TextArea taskTF = new TextArea();
         taskTF.setEditable(false);
-        taskTF.setPromptText("Catatan " + notes.size());
+        taskTF.setPromptText("Catatan ");
         taskTF.getStyleClass().add("noteTF");
         taskTF.setPrefWidth(9000);
         taskTF.setWrapText(true);
@@ -286,7 +286,7 @@ public class NoteScene extends CreateDeleteTask {
                 TextArea taskTF = new TextArea();
                 taskTF.setEditable(false);
                 taskTF.setText(notes.get(i));
-                taskTF.setPromptText("Catatan " + notes.size());
+                taskTF.setPromptText("Catatan ");
                 taskTF.getStyleClass().add("noteTF");
                 taskTF.setPrefWidth(9000);
                 taskTF.setWrapText(true);

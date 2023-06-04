@@ -186,7 +186,7 @@ public class ReminderScene extends CreateDeleteTask {
         // buat textfield untuk judul tugas
         TextField taskTF = new TextField();
         taskTF.setEditable(false);
-        taskTF.setPromptText("Tugas " + tasks.size());
+        taskTF.setPromptText("Tugas ");
         taskTF.getStyleClass().add("remindTF");
         taskTF.setMinWidth(800);
         taskTF.setOnAction(env -> {
@@ -290,7 +290,7 @@ public class ReminderScene extends CreateDeleteTask {
                 TextField taskTF = new TextField();
                 taskTF.setEditable(false);
                 taskTF.setText(tasks.get(i));
-                taskTF.setPromptText("Tugas " + tasks.size());
+                taskTF.setPromptText("Tugas ");
                 taskTF.getStyleClass().add("remindTF");
                 taskTF.setPrefWidth(9000);
                 taskTF.setOnAction(env -> {
