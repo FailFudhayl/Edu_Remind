@@ -28,7 +28,7 @@ public class LoginScene {
 
     public void show() {
         // init borderpone
-        BorderPane root = new BorderPane();
+        VBox root = new VBox();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         root.getStyleClass().add("scene1");
 
@@ -44,7 +44,6 @@ public class LoginScene {
         HBox logoBox = new HBox(loginLogos);
         //git commit -m "feat : atur agar logobox di tengah lalu letakkan di atas"
         logoBox.setAlignment(Pos.CENTER);
-        root.setTop(logoBox);
 
         // Email Field dan Password Field
         //git commit -m "feat : buat label great "
@@ -74,10 +73,8 @@ public class LoginScene {
         logTFBox.setSpacing(10);
 
         VBox loginBox = new VBox(greetBox, logTFBox);
-        loginBox.setPadding(new Insets(130, 191, 102, 191));
+        loginBox.setPadding(new Insets(40, 191, 20, 191));
         loginBox.setSpacing(20);
-
-        root.setCenter(loginBox);
 
         // Tombol Login & Register
         Label validLB= new Label("  ");
@@ -128,14 +125,15 @@ public class LoginScene {
         loginButBox.setAlignment(Pos.CENTER);
         loginButBox.setSpacing(10);
 
-        root.setBottom(loginButBox);
+        root.getChildren().addAll(logoBox, loginBox, loginButBox);
+        root.setSpacing(10);
 
         // init scroll
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
 
         // init scene
-        Scene loginScene = new Scene(scroll, 1440, 800);
+        Scene loginScene = new Scene(scroll, 1200, 800);
         loginScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(loginScene);
         stage.show();

@@ -29,7 +29,6 @@ public class NoteScene extends CreateDeleteTask {
     private Stage stage;
     private int id;
     // handling container dan method textfield yang ingin dibuat
-    // private int textAracount;
     private VBox tugasBox;
     ObservableList<String> notes = FXCollections.observableArrayList();
 
@@ -46,8 +45,8 @@ public class NoteScene extends CreateDeleteTask {
         // Init VBOX
         tugasBox = new VBox();
         tugasBox.getStyleClass().add("scene1");
-        // init borderpane
-        BorderPane root = new BorderPane();
+        // init task container
+        VBox root = new VBox();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         root.getStyleClass().add("scene1");
 
@@ -64,10 +63,7 @@ public class NoteScene extends CreateDeleteTask {
         HBox logobox = new HBox(mainLogos, title1, title2);
         logobox.setSpacing(10);
         logobox.setAlignment(Pos.CENTER);
-        logobox.setPadding(new Insets(32, 540, 66, 300));
-
-        root.setTop(logobox);
-        BorderPane.setAlignment(logobox, Pos.CENTER);
+        logobox.setPadding(new Insets(32, 200, 30, 100));
 
         updateVBox();
 
@@ -76,7 +72,6 @@ public class NoteScene extends CreateDeleteTask {
         scroll.setFitToHeight(true);
         scroll.setFitToWidth(true);
         scroll.setStyle("-fx-hbar-policy: never; -fx-vbar-policy: never;");
-        root.setCenter(scroll);
 
         // buat tombol back and plus
         Image arrow = new Image(getClass().getClassLoader().getResourceAsStream("img/Arrow.png"));
@@ -104,18 +99,9 @@ public class NoteScene extends CreateDeleteTask {
         });
 
         HBox plusbackbox = new HBox(back, plus);
-        plusbackbox.setSpacing(869);
+        plusbackbox.setSpacing(780);
         plusbackbox.setAlignment(Pos.CENTER);
-        plusbackbox.setPadding(new Insets(10, 30, 54, 95));
-
-        root.setBottom(plusbackbox);
-
-        Image putih = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
-        ImageView white = new ImageView(putih);
-        VBox right = new VBox(white);
-        right.setMaxWidth(1);
-        right.getStyleClass().add("scene1");
-        root.setRight(right);
+        plusbackbox.setPadding(new Insets(10, 30, 54, 30));
 
         // membuat sidebar
         Image lonceng = new Image(getClass().getClassLoader().getResourceAsStream("img/lonceng_putih.png"));
@@ -152,7 +138,7 @@ public class NoteScene extends CreateDeleteTask {
         sidebar.setPadding(new Insets(40, 10, 0, 0));
 
         HBox noteBox = new HBox(sidebar, root);
-        noteBox.setMaxWidth(1800);
+        noteBox.setMaxWidth(1400);
         noteBox.setMaxHeight(850);
         noteBox.getStyleClass().add("scene1");
 
@@ -166,11 +152,11 @@ public class NoteScene extends CreateDeleteTask {
             tugasBox.setPadding(new Insets(30, 10, 35, 10));
         }
 
-        // borderpane margin
-        BorderPane.setMargin(right, new Insets(5));
+        //getchildren semua task container
+        root.getChildren().addAll(logobox, scroll,plusbackbox);
 
         // init scene
-        Scene remindScene = new Scene(noteBox, 1800, 800);
+        Scene remindScene = new Scene(noteBox, 1200, 800);
         remindScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(remindScene);
         stage.show();
@@ -181,7 +167,6 @@ public class NoteScene extends CreateDeleteTask {
         if (tugasBox.getChildren().get(0) instanceof Label) {
             tugasBox.getChildren().remove(0);
         }
-        // textAracount++;
 
         // buat container judul tugas
         TextArea taskTF = new TextArea();
@@ -272,16 +257,8 @@ public class NoteScene extends CreateDeleteTask {
         tugasBox.getChildren().clear();
         notes.addAll(ControllerDB.getAllCatatan(getId()));
         try {
-            // if (tugasBox.getChildren().isEmpty()) {
-            //     Label kosonglb = new Label("                           Tidak ada catatan terbaru");
-            //     kosonglb.getStyleClass().add("kosongg");
-            //     tugasBox.getChildren().add(kosonglb);
-            //     tugasBox.setAlignment(Pos.TOP_LEFT);
-            //     tugasBox.setSpacing(5);
-            //     tugasBox.setPadding(new Insets(30, 10, 35, 10));
-            // }
             for (int i = 0; i < notes.size(); i++) {
-                final int index = i;
+                // final int index = i;
                 // buat container judul tugas
                 TextArea taskTF = new TextArea();
                 taskTF.setEditable(false);
@@ -316,9 +293,6 @@ public class NoteScene extends CreateDeleteTask {
                 hapus.getStyleClass().add("tombolRM");
                 hapus.setOnAction(env -> {
                     ControllerDB.deleteCatatan(getId(), taskTF.getText());
-                    // deleteTask(index);
-                    // tasks.removeAll();
-                    // tasks.setAll(ControllerDB.getAllTugas(this.getId()));
                     NoteScene noteScene = new NoteScene(stage, this.getId());
                     noteScene.show();
                 });

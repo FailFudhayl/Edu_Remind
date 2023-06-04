@@ -26,8 +26,8 @@ public class RegisterScene {
     }
 
     public void show() {
-        // init borderpone
-        BorderPane root = new BorderPane();
+        // init main container
+        VBox root = new VBox();
         root.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         root.getStyleClass().add("scene1");
 
@@ -40,7 +40,6 @@ public class RegisterScene {
         loginLogos.setId("logo1");
         HBox logoBox = new HBox(loginLogos);
         logoBox.setAlignment(Pos.CENTER);
-        root.setTop(logoBox);
 
         // Email Field dan Password Field
         Label welcome = new Label("Hellooo👋");
@@ -69,12 +68,10 @@ public class RegisterScene {
         logTFBox.setSpacing(10);
 
         VBox loginBox = new VBox(greetBox, logTFBox);
-        loginBox.setPadding(new Insets(130, 191, 102, 191));
+        loginBox.setPadding(new Insets(40, 191, 20, 191));
         loginBox.setSpacing(17.5);
 
-        root.setCenter(loginBox);
-
-//         // Tombol Register
+         // Tombol Register
         Label validLB= new Label("  ");
         validLB.getStyleClass().add("rgisLB");
         Button regisButton = new Button("Register");
@@ -124,14 +121,15 @@ public class RegisterScene {
         registbutBox.setAlignment(Pos.CENTER);
         registbutBox.setSpacing(10);
 
-        root.setBottom(registbutBox);
+        // getchildren all item
+        root.getChildren().addAll(logoBox, loginBox, registbutBox);
 
         // init scroll
         ScrollPane scroll = new ScrollPane(root);
         scroll.setFitToWidth(true);
 
         // init scene
-        Scene loginScene = new Scene(scroll, 1440, 800);
+        Scene loginScene = new Scene(scroll, 1200, 800);
         loginScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(loginScene);
         stage.show();

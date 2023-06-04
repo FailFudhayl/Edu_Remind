@@ -48,7 +48,7 @@ public class SplashScene {
         root.setAlignment(Pos.CENTER);
 
         // git commit -m "feat : init scene"
-        Scene splashScene = new Scene(root, 1440, 800);
+        Scene splashScene = new Scene(root, 1200, 800);
         splashScene.getRoot().getStyleClass().add("scene1");
         splashScene.getStylesheets().add(getClass().getResource("/styles/style.css").toExternalForm());
         stage.setScene(splashScene);

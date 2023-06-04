@@ -135,7 +135,7 @@
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-padding: 30px 8px 30px 8px;
-    -fx-pref-width: 700;
+    -fx-pref-width: 800;
 }
 
 .tombolRM{
@@ -180,7 +180,7 @@
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-padding: 10px 8px;
-    -fx-pref-width: 1000;
+    -fx-pref-width: 800;
 }
 
 .kosongg{
@@ -189,6 +189,7 @@
     -fx-font-weight: 680;
     -fx-font-size: 40px;
     -fx-text-fill: #232855;
+    -fx-background-color: #FFFFFF;
 }
 
 .plusback{
